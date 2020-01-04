@@ -26,5 +26,8 @@ go = tk.Button(master=back, text='Start Game')
 go.pack()
 close = tk.Button(master=back, text='Quit', command=root.destroy)
 close.pack()
+option1 = tk.OptionMenu(back, *part1, width=50)
+option1.pack()
+
 
 root.mainloop()
