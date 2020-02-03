@@ -1,4 +1,3 @@
-
 import os
 import pickle
 import sys
@@ -428,15 +427,12 @@ class HOTEL_MANGMENT_checkin:
         self.Label4.configure(highlightcolor="black")
         self.Label4.configure(text='''ENTER YOUR NUMBER''')
        
-        master = Tk()
-        variable = StringVar(master)
-        variable.set(Delux[0])
-
+        
+        variable = StringVar()
         self.Entry3 = OptionMenu(self.Frame2,variable,*partGroup)
         self.name=StringVar()
         self.Entry3.place(relx=0.47, rely=0.05,height=34, relwidth=0.43)
-        
-        self.Entry3.configure(textvariable=self.name)
+        self.Entry3.configure(textvariable=variable)
 
 
         self.Entry4 = Entry(self.Frame2)
@@ -746,6 +742,10 @@ class HOTEL_MANGMENT_checkin:
 
 if __name__ == '__main__':
     hotel=HOTEL_MANGMENT_checkin()
+
+
+
+
 
 
 
