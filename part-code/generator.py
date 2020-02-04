@@ -1,3 +1,4 @@
+
 import os
 import pickle
 import sys
@@ -403,6 +404,49 @@ class HOTEL_MANGMENT_checkin:
         self.Frame2.configure(highlightcolor="black")
         self.Frame2.configure(width=995)
 
+        
+       
+        
+        groupOne = StringVar()
+        self.Entry3 = OptionMenu(self.Frame2,groupOne,*partGroup)
+        self.name=StringVar()
+        self.Entry3.place(relx=0.47, rely=0.05,height=34, relwidth=0.43)
+        self.Entry3.configure(background="white")
+        self.Entry3["menu"].configure(bg="white")
+        self.Entry3.configure(textvariable=groupOne)
+
+        groupTwo = StringVar()
+        self.Entry4 = OptionMenu(self.Frame2,groupTwo,*partGroup)
+        self.mobile=StringVar()
+        self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+        self.Entry4.configure(background="white")
+        self.Entry4["menu"].configure(bg="white")
+        self.Entry4.configure(textvariable=groupTwo)
+
+        groupThree = StringVar()
+        self.Entry3 = OptionMenu(self.Frame2,groupThree,*partGroup)
+        self.name=StringVar()
+        self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+        self.Entry3.configure(background="white")
+        self.Entry3["menu"].configure(bg="white")
+        self.Entry3.configure(textvariable=groupThree)
+
+        groupFour = StringVar()
+        self.Entry4 = OptionMenu(self.Frame2,groupFour,*partGroup)
+        self.mobile=StringVar()
+        self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+        self.Entry4.configure(background="white")
+        self.Entry4["menu"].configure(bg="white")
+        self.Entry4.configure(textvariable=groupFour)
+
+        self.Label3 = Label(self.Frame2)
+
+        self.Label3.place(relx=0.68, rely=0.03, height=47, width=289)
+
+        
+        
+        
+
         self.Label3 = Label(self.Frame2)
         self.Label3.place(relx=0.05, rely=0.03, height=47, width=289)
         self.Label3.configure(activebackground="#ffffff")
@@ -413,59 +457,10 @@ class HOTEL_MANGMENT_checkin:
         self.Label3.configure(foreground="#000000")
         self.Label3.configure(highlightbackground="#ffffff")
         self.Label3.configure(highlightcolor="black")
-        self.Label3.configure(text='''ENTER YOUR NAME''')
-
-        self.Label4 = Label(self.Frame2)
-        self.Label4.place(relx=0.045, rely=0.29, height=47, width=329)
-        self.Label4.configure(activebackground="#ffffff")
-        self.Label4.configure(activeforeground="black")
-        self.Label4.configure(background="#ffffff")
-        self.Label4.configure(disabledforeground="#bfbfbf")
-        self.Label4.configure(font=font12)
-        self.Label4.configure(foreground="#000000")
-        self.Label4.configure(highlightbackground="#ffffff")
-        self.Label4.configure(highlightcolor="black")
-        self.Label4.configure(text='''ENTER YOUR NUMBER''')
-       
-        
-        variable = StringVar()
-        self.Entry3 = OptionMenu(self.Frame2,variable,*partGroup)
-        self.name=StringVar()
-        self.Entry3.place(relx=0.47, rely=0.05,height=34, relwidth=0.43)
-        self.Entry3.configure(textvariable=variable)
-
-
-        self.Entry4 = Entry(self.Frame2)
-        self.mobile=StringVar()
-        self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-        self.Entry4.configure(background="white")
-        self.Entry4.configure(disabledforeground="#bfbfbf")
-        self.Entry4.configure(font=font10)
-        self.Entry4.configure(foreground="#000000")
-        self.Entry4.configure(highlightbackground="#ffffff")
-        self.Entry4.configure(highlightcolor="black")
-        self.Entry4.configure(insertbackground="black")
-        self.Entry4.configure(selectbackground="#e6e6e6")
-        self.Entry4.configure(selectforeground="black")
-        self.Entry4.configure(textvariable=self.mobile)
-
-
-        self.Entry5 = Entry(self.Frame2)
-        self.addr = StringVar()
-        self.Entry5.place(relx=0.47, rely=0.18,height=34, relwidth=0.43)
-        self.Entry5.configure(background="white")
-        self.Entry5.configure(disabledforeground="#bfbfbf")
-        self.Entry5.configure(font=font10)
-        self.Entry5.configure(foreground="#000000")
-        self.Entry5.configure(highlightbackground="#ffffff")
-        self.Entry5.configure(highlightcolor="black")
-        self.Entry5.configure(insertbackground="black")
-        self.Entry5.configure(selectbackground="#e6e6e6")
-        self.Entry5.configure(selectforeground="black")
-        self.Entry5.configure(textvariable=self.addr)
+        self.Label3.configure(text='''PART GROUP''')
 
         self.Label5 = Label(self.Frame2)
-        self.Label5.place(relx=0.045, rely=0.16, height=47, width=334)
+        self.Label5.place(relx=0.05, rely=0.16, height=47, width=334)
         self.Label5.configure(activebackground="#ffffff")
         self.Label5.configure(activeforeground="black")
         self.Label5.configure(background="#ffffff")
@@ -474,31 +469,32 @@ class HOTEL_MANGMENT_checkin:
         self.Label5.configure(foreground="#000000")
         self.Label5.configure(highlightbackground="#ffffff")
         self.Label5.configure(highlightcolor="black")
-        self.Label5.configure(text='''ENTER YOUR ADDRESS''')
+        self.Label5.configure(text='''SUB GROUP 1''')
 
-        self.Label6 = Label(self.Frame2)
-        self.Label6.place(relx=0.32, rely=0.5, height=48, width=296)
-        self.Label6.configure(activebackground="#ffffff")
-        self.Label6.configure(activeforeground="black")
-        self.Label6.configure(background="#ffffff")
-        self.Label6.configure(disabledforeground="#bfbfbf")
-        self.Label6.configure(font=font13)
-        self.Label6.configure(foreground="#000000")
-        self.Label6.configure(highlightbackground="#ffffff")
-        self.Label6.configure(highlightcolor="black")
-        self.Label6.configure(text='''CHOOSE YOUR ROOM''')
+        self.Label4 = Label(self.Frame2)
+        self.Label4.place(relx=0.05, rely=0.29, height=47, width=329)
+        self.Label4.configure(activebackground="#ffffff")
+        self.Label4.configure(activeforeground="black")
+        self.Label4.configure(background="#ffffff")
+        self.Label4.configure(disabledforeground="#bfbfbf")
+        self.Label4.configure(font=font12)
+        self.Label4.configure(foreground="#000000")
+        self.Label4.configure(highlightbackground="#ffffff")
+        self.Label4.configure(highlightcolor="black")
+        self.Label4.configure(text='''SUB GROUP 2''')
 
-        self.Label7 = Label(self.Frame2)
-        self.Label7.place(relx=0.3, rely=0.79, height=48, width=300)
-        self.Label7.configure(activebackground="#ffffff")
-        self.Label7.configure(activeforeground="black")
-        self.Label7.configure(background="#ffffff")
-        self.Label7.configure(disabledforeground="#bfbfbf")
-        self.Label7.configure(font=font14)
-        self.Label7.configure(foreground="#000000")
-        self.Label7.configure(highlightbackground="#ffffff")
-        self.Label7.configure(highlightcolor="black")
-        self.Label7.configure(text='''CHOOSE PAYMENT METHOD''')
+        self.Label1 = Label(self.Frame2)
+        self.Label1.place(relx=0.05, rely=0.43, height=47, width=334)
+        self.Label1.configure(background="#ffffff")
+        self.Label1.configure(disabledforeground="#bfbfbf")
+        self.Label1.configure(font=font12)
+        self.Label1.configure(foreground="#000000")
+        self.Label1.configure(text='''SUB GROUP 3''')
+
+        
+
+        
+        
 
         self.Message4 = Message(self.Frame2)
         self.Message4.place(relx=0.41, rely=0.04, relheight=0.1, relwidth=0.05)
@@ -530,115 +526,9 @@ class HOTEL_MANGMENT_checkin:
         self.Message6.configure(text=''':''')
         self.Message6.configure(width=36)
 
-        self.Checkbutton1 = Checkbutton(self.Frame2)
-        self.var1 = IntVar()
-        self.Checkbutton1.place(relx=0.15, rely=0.58, relheight=0.17
-                , relwidth=0.14)
-        self.Checkbutton1.configure(activebackground="#ffffff")
-        self.Checkbutton1.configure(activeforeground="#000000")
-        self.Checkbutton1.configure(background="#ffffff")
-        self.Checkbutton1.configure(disabledforeground="#bfbfbf")
-        self.Checkbutton1.configure(font=font14)
-        self.Checkbutton1.configure(foreground="#000000")
-        self.Checkbutton1.configure(highlightbackground="#ffffff")
-        self.Checkbutton1.configure(highlightcolor="black")
-        self.Checkbutton1.configure(justify=LEFT)
-        self.Checkbutton1.configure(text='''DELUXE''')
-        self.Checkbutton1.configure(variable=self.var1)
+      
 
-
-
-
-
-        self.Checkbutton2 = Checkbutton(self.Frame2)
-        self.var2 = IntVar()
-        self.Checkbutton2.place(relx=0.15, rely=0.72, relheight=0.11
-                , relwidth=0.21)
-        self.Checkbutton2.configure(activebackground="#ffffff")
-        self.Checkbutton2.configure(activeforeground="#000000")
-        self.Checkbutton2.configure(background="#ffffff")
-        self.Checkbutton2.configure(disabledforeground="#bfbfbf")
-        self.Checkbutton2.configure(font=font13)
-        self.Checkbutton2.configure(foreground="#000000")
-        self.Checkbutton2.configure(highlightbackground="#ffffff")
-        self.Checkbutton2.configure(highlightcolor="black")
-        self.Checkbutton2.configure(justify=LEFT)
-        self.Checkbutton2.configure(text='''FULL DELUXE''')
-        self.Checkbutton2.configure(variable=self.var2)
-
-        self.Checkbutton3 = Checkbutton(self.Frame2)
-        self.var3 = IntVar()
-        self.Checkbutton3.place(relx=0.5, rely=0.6, relheight=0.11
-                , relwidth=0.16)
-        self.Checkbutton3.configure(activebackground="#ffffff")
-        self.Checkbutton3.configure(activeforeground="#000000")
-        self.Checkbutton3.configure(background="#ffffff")
-        self.Checkbutton3.configure(disabledforeground="#bfbfbf")
-        self.Checkbutton3.configure(font=font13)
-        self.Checkbutton3.configure(foreground="#000000")
-        self.Checkbutton3.configure(highlightbackground="#ffffff")
-        self.Checkbutton3.configure(highlightcolor="black")
-        self.Checkbutton3.configure(justify=LEFT)
-        self.Checkbutton3.configure(text='''GENERAL''')
-        self.Checkbutton3.configure(variable=self.var3)
-
-        self.Checkbutton4 = Checkbutton(self.Frame2)
-        self.var4 = IntVar()
-        self.Checkbutton4.place(relx=0.5, rely=0.71, relheight=0.11
-                , relwidth=0.12)
-        self.Checkbutton4.configure(activebackground="#ffffff")
-        self.Checkbutton4.configure(activeforeground="#000000")
-        self.Checkbutton4.configure(background="#ffffff")
-        self.Checkbutton4.configure(disabledforeground="#bfbfbf")
-        self.Checkbutton4.configure(font=font13)
-        self.Checkbutton4.configure(foreground="#000000")
-        self.Checkbutton4.configure(highlightbackground="#ffffff")
-        self.Checkbutton4.configure(highlightcolor="black")
-        self.Checkbutton4.configure(justify=LEFT)
-        self.Checkbutton4.configure(text='''JOINT''')
-        self.Checkbutton4.configure(variable=self.var4)
-
-        self.Checkbutton5 = Checkbutton(self.Frame2)
-        self.var5 = IntVar()
-        self.Checkbutton5.place(relx=0.485, rely=0.89, relheight=0.1
-                                , relwidth=0.3)
-        self.Checkbutton5.configure(activebackground="#ffffff")
-        self.Checkbutton5.configure(activeforeground="#000000")
-        self.Checkbutton5.configure(background="#ffffff")
-        self.Checkbutton5.configure(disabledforeground="#bfbfbf")
-        self.Checkbutton5.configure(font=font16)
-        self.Checkbutton5.configure(foreground="#000000")
-        self.Checkbutton5.configure(highlightbackground="#ffffff")
-        self.Checkbutton5.configure(highlightcolor="black")
-        self.Checkbutton5.configure(justify=LEFT)
-        self.Checkbutton5.configure(text='''By credit/debit card''')
-        self.Checkbutton5.configure(variable=self.var5)
-
-        self.Checkbutton6 = Checkbutton(self.Frame2)
-        self.var6 = IntVar()
-        self.Checkbutton6.place(relx=0.153, rely=0.89, relheight=0.1
-                                , relwidth=0.15)
-        self.Checkbutton6.configure(activebackground="#ffffff")
-        self.Checkbutton6.configure(activeforeground="#000000")
-        self.Checkbutton6.configure(background="#ffffff")
-        self.Checkbutton6.configure(disabledforeground="#bfbfbf")
-        self.Checkbutton6.configure(font=font16)
-        self.Checkbutton6.configure(foreground="#000000")
-        self.Checkbutton6.configure(highlightbackground="#ffffff")
-        self.Checkbutton6.configure(highlightcolor="black")
-        self.Checkbutton6.configure(justify=LEFT)
-        self.Checkbutton6.configure(text='''By cash''')
-        self.Checkbutton6.configure(variable=self.var6)
-
-        self.Message7 = Message(self.Frame2)
-        self.Message7.place(relx=0.28, rely=0.46, relheight=0.11, relwidth=0.04)
-        self.Message7.configure(background="#ffffff")
-        self.Message7.configure(font=font15)
-        self.Message7.configure(foreground="#000000")
-        self.Message7.configure(highlightbackground="#ffffff")
-        self.Message7.configure(highlightcolor="black")
-        self.Message7.configure(text='''-''')
-        self.Message7.configure(width=41)
+        
 
         self.Button1 = Button(self.Frame2)
         self.Button1.place(relx=0.91, rely=0.05, height=33, width=43)
@@ -693,25 +583,10 @@ class HOTEL_MANGMENT_checkin:
         self.Button4.configure(text='''SUBMIT''')
         self.Button4.configure(command=submit_clicked)
 
-        self.Label1 = Label(self.Frame2)
-        self.Label1.place(relx=0.05, rely=0.43, height=44, width=260)
-        self.Label1.configure(background="#ffffff")
-        self.Label1.configure(disabledforeground="#bfbfbf")
-        self.Label1.configure(font=font13)
-        self.Label1.configure(foreground="#000000")
-        self.Label1.configure(text='''NUMBER OF DAYS''')
+        
 
 
-        self.Entry1 = Entry(self.Frame2)
-        self.days=StringVar()
-        self.Entry1.place(relx=0.47, rely=0.43, height=34, relwidth=0.43)
-        self.Entry1.configure(background="white")
-        self.Entry1.configure(disabledforeground="#bfbfbf")
-        self.Entry1.configure(font=font10)
-        self.Entry1.configure(foreground="#000000")
-        self.Entry1.configure(insertbackground="black")
-        self.Entry1.configure(width=424)
-        self.Entry1.configure(textvariable=self.days)
+        
 
         self.Message8 = Message(self.Frame2)
         self.Message8.place(relx=0.42, rely=0.41, relheight=0.11, relwidth=0.03)
@@ -742,10 +617,6 @@ class HOTEL_MANGMENT_checkin:
 
 if __name__ == '__main__':
     hotel=HOTEL_MANGMENT_checkin()
-
-
-
-
 
 
 
