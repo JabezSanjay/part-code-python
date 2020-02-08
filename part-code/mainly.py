@@ -43,11 +43,11 @@ class HOTEL_MANAGEMENT:
         _ana1color = '#ffffff'  # X11 color: 'white'
         _ana2color = '#ffffff'  # X11 color: 'white'
         font14 = "-family {Segoe UI} -size 15 -weight bold -slant "  \
-            "roman -underline 0 -overstrike 0"
-        font16 = "-family {Swis721 BlkCn BT} -size 40 -weight bold "  \
-            "-slant roman -underline 0 -overstrike 0"
+            "italic -underline 0 -overstrike 0"
+        font16 = "-family {Times New Roman} -size 40 -weight bold "  \
+            "-slant italic -underline 0 -overstrike 0"
         font9 = "-family {Segoe UI} -size 9 -weight normal -slant "  \
-            "roman -underline 0 -overstrike 0"
+            "italic -underline 0 -overstrike 0"
 
         root.geometry("963x749+540+110")
         root.title("Part Code Generator")
@@ -81,12 +81,12 @@ class HOTEL_MANAGEMENT:
 
         self.Button2 = Button(self.Frame1)
         self.Button2.place(relx=0.18, rely=0.17, height=103, width=566)
-        self.Button2.configure(activebackground="#d9d9d9")
-        self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="#d9d9d9")
+        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activeforeground="#10273F")
+        self.Button2.configure(background="#10273F")
         self.Button2.configure(disabledforeground="#bfbfbf")
         self.Button2.configure(font=font14)
-        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(foreground="#ffffff")
         self.Button2.configure(highlightbackground="#d9d9d9")
         self.Button2.configure(highlightcolor="black")
         self.Button2.configure(pady="0")
@@ -96,12 +96,12 @@ class HOTEL_MANAGEMENT:
 
         self.Button3 = Button(self.Frame1)
         self.Button3.place(relx=0.18, rely=0.33, height=93, width=566)
-        self.Button3.configure(activebackground="#d9d9d9")
-        self.Button3.configure(activeforeground="#000000")
-        self.Button3.configure(background="#d9d9d9")
+        self.Button3.configure(activebackground="#ffffff")
+        self.Button3.configure(activeforeground="#18395c")
+        self.Button3.configure(background="#18395c")
         self.Button3.configure(disabledforeground="#bfbfbf")
         self.Button3.configure(font=font14)
-        self.Button3.configure(foreground="#000000")
+        self.Button3.configure(foreground="#ffffff")
         self.Button3.configure(highlightbackground="#d9d9d9")
         self.Button3.configure(highlightcolor="black")
         self.Button3.configure(pady="0")
@@ -111,12 +111,12 @@ class HOTEL_MANAGEMENT:
 
         self.Button4 = Button(self.Frame1)
         self.Button4.place(relx=0.18, rely=0.47, height=93, width=566)
-        self.Button4.configure(activebackground="#d9d9d9")
-        self.Button4.configure(activeforeground="#000000")
-        self.Button4.configure(background="#d9d9d9")
+        self.Button4.configure(activebackground="#ffffff")
+        self.Button4.configure(activeforeground="#214C7A")
+        self.Button4.configure(background="#214C7A")
         self.Button4.configure(disabledforeground="#bfbfbf")
         self.Button4.configure(font=font14)
-        self.Button4.configure(foreground="#000000")
+        self.Button4.configure(foreground="#ffffff")
         self.Button4.configure(highlightbackground="#d9d9d9")
         self.Button4.configure(highlightcolor="black")
         self.Button4.configure(pady="0")
@@ -126,12 +126,12 @@ class HOTEL_MANAGEMENT:
 
         self.Button5 = Button(self.Frame1)
         self.Button5.place(relx=0.18, rely=0.61, height=103, width=566)
-        self.Button5.configure(activebackground="#d9d9d9")
-        self.Button5.configure(activeforeground="#000000")
-        self.Button5.configure(background="#d9d9d9")
+        self.Button5.configure(activebackground="#ffffff")
+        self.Button5.configure(activeforeground="#2D65A2")
+        self.Button5.configure(background="#2D65A2")
         self.Button5.configure(disabledforeground="#bfbfbf")
         self.Button5.configure(font=font14)
-        self.Button5.configure(foreground="#000000")
+        self.Button5.configure(foreground="#ffffff")
         self.Button5.configure(highlightbackground="#d9d9d9")
         self.Button5.configure(highlightcolor="black")
         self.Button5.configure(pady="0")
@@ -141,12 +141,12 @@ class HOTEL_MANAGEMENT:
 
         self.Button6 = Button(self.Frame1)
         self.Button6.place(relx=0.18, rely=0.77, height=103, width=566)
-        self.Button6.configure(activebackground="#d9d9d9")
-        self.Button6.configure(activeforeground="#000000")
-        self.Button6.configure(background="#d9d9d9")
+        self.Button6.configure(activebackground="#ffffff")
+        self.Button6.configure(activeforeground="#3F8ADB")
+        self.Button6.configure(background="#3F8ADB")
         self.Button6.configure(disabledforeground="#bfbfbf")
         self.Button6.configure(font=font14)
-        self.Button6.configure(foreground="#000000")
+        self.Button6.configure(foreground="#ffffff")
         self.Button6.configure(highlightbackground="#d9d9d9")
         self.Button6.configure(highlightcolor="black")
         self.Button6.configure(pady="0")
