@@ -47,7 +47,7 @@ def file_save():
 
 
 u = list()
-partGroup = ("Mild Steel",
+partGroup = ["Mild Steel",
 "Angle",
 "Channel",
 "Flat",
@@ -57,7 +57,48 @@ partGroup = ("Mild Steel",
 "Joist",
 "Hatsection",
 "Channelsection",
-)
+]
+mildSteel_1 = ["Angle", "Channel", "Flat", "Sheet", "Plate", "Rod", "Joist", "Hat section", "Channel section"]
+mildSteel_2 = ["Hot Rolled", "Cold Rolled", "Plain", "Round", "Square", "Chequered"]
+mildSteel_3 = ["Polished", "Non- polish"]
+stainlessSteel = ["Sheet", "Coil"]
+galvanizedIron_1 = ["Sheet", "Wire", "Pipe", "Fittings"]
+galvanizedIron_2 = ["Plain", "Corrugated", "PVC Coated", "Reducer", "Elbow", "Tee", "Cross", "Hex Nipple", "Dummy Plug", "Union", "Coupling", "Clamp", "Pipe"]
+Aluminium_1 = ["Extrusions", "Sheet", "Plate", "Coil"]
+Aluminium_2 = ["Plain", "Chequered"]
+Aluminium_3 =["Polished", "Non-Polish", "PVC", "Coated"]
+Plywood_1 = ["Plain", "Chequered"]
+Plywood_2 = ["B. W. R.", "W. W. R.", "O. S. T", "Commercial Marine"]
+Timber_1 = ["Ayini", "Karangi", "Silver Oak", "Rubber"]
+Timber_2 = ["Reaper", "Curves", "Planks"]
+ClothItems = ["Leather Cloth", "Vinyl Mats", "Carpets", "Other Fabric items"]
+ClothItems_2 = ["Manufacturer"]
+ClothItems_3 = ["Shade", "Colour"] 
+Paints = ["Manufacturer"]
+Paints_2 = ["Primers", "Base Paints", "Thinner", "Enamel", "Lacquer", "Poly Urethane", "Chlorinated Rubber", "Filler materials", "Other Addictive"]
+Paints_3 = ["Colour"]
+Cushions = ["Rubber", "Foam", "Coir"]
+Cushions_2 = ["Flat", "Taper", "Strip"]
+Glass = ["Toughened", "Laminated"]
+Glass_2 = ["Flat", "Curved"]
+Glass_3 = ["Clear", "Smoke"]
+AutoElectricals = ["Wires", "Cables", "Chokes", "Stater", "Fuse Units", "Bulbs/Lamps"]
+AutoElectricals_2 = ["Manufacturer"]
+AutoElectricals_3 = ["Clear"]
+RubberGoods = ["Extrusions", "Sheets", "Tubes"]
+LaminatedSheets =["Shade"]
+LaminatedSheets_2 = ["Types of finish"]
+Pipes = ["M. S.", "ERW", "Stainless steel"]
+Pipes_2 = ["Square Round"]
+DoorMaterials = ["Locks", "Handles", "Hinges", "Tower Bolts", "Padlock Items", "Door Assys", "Door closer", "Door padding Item", "Window material"]
+PVCItems = ["Sleeves", "Inserts", "Bushes", "Clips", "Grommets", "Packing Items", "Pipe Fittings"]
+PVCItems_2 = ["Colour", "Flat base", "Taper base", "Reducer", "Elbow", "Tee", "Cross", "Hex Nipple", "Dummy Plug", "Union", "Coupling", "Clamp", "Pipe"]
+FRPMouldedItems = ["Resin", "Mat", "Accelerator", "Catalyst"]
+ChemicalsAcids = ["Chemicals", "Acids"]
+Insulation = ["Puf", "Glass Wool", "Thermocol"]
+LubricantsAdhesives = ["Pastes", "Sealants", "Oils", "Grease"]
+
+
 Delux = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 Semi_Delux = (11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25)
 General = (26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45)
@@ -346,6 +387,8 @@ class HOTEL_MANGMENT_checkin:
         labelTest.pack(side="top")
 
         
+
+       
         
     
 
@@ -359,6 +402,11 @@ class HOTEL_MANGMENT_checkin:
         self.Entry3.configure(textvariable=groupOne)
 
         groupOne.trace("w", submit_clicked())
+
+        if groupOne == partGroup[0]:
+            labelTest.configure(text="The selected item is {}".format(groupOne.get()))
+
+        
         
         groupTwo = StringVar()
         self.Entry4 = OptionMenu(self.Frame2,groupTwo,*partGroup)
