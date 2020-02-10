@@ -83,7 +83,8 @@ class save:
 
 
 class HOTEL_MANGMENT_checkin:
-
+    
+    
 
     def __init__(self):
         self.NAME=""
@@ -96,6 +97,8 @@ class HOTEL_MANGMENT_checkin:
 
 
 
+        def callback(*args):
+            labelTest.configure(text="The selected item is {}".format(groupOne.get()))
 
         def chk_name():
             while True:
@@ -227,77 +230,8 @@ class HOTEL_MANGMENT_checkin:
 
 
 
-        def submit_clicked():
-            if self.var1.get()==1 and self.var2.get()==0 and self.var3.get()==0 and self.var4.get()==0 and self.var5.get()==1 and self.var6.get()==0:
-                self.ch=1
-                self.p=2
 
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-
-
-            elif self.var1.get() == 1 and self.var2.get() == 0 and self.var3.get() == 0 and self.var4.get() == 0 and self.var5.get() == 0 and self.var6.get() == 1:
-                self.ch = 1
-                self.p = 1
-
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-            elif self.var1.get() == 0 and self.var2.get() == 1 and self.var3.get() == 0 and self.var4.get() == 0 and self.var5.get() == 0 and self.var6.get() == 1:
-                self.ch = 2
-                self.p = 1
-
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-            elif self.var1.get() == 0 and self.var2.get() == 1 and self.var3.get() == 0 and self.var4.get() == 0 and self.var5.get() == 1 and self.var6.get() ==0 :
-                self.ch = 2
-                self.p = 2
-
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-            elif self.var1.get() == 0 and self.var2.get() == 0 and self.var3.get() == 1 and self.var4.get() == 0 and self.var5.get() == 0 and self.var6.get() == 1:
-                self.ch = 3
-                self.p = 1
-
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-            elif self.var1.get() == 0 and self.var2.get() == 0 and self.var3.get() == 1 and self.var4.get() == 0 and self.var5.get() == 1 and self.var6.get() == 0:
-                self.ch = 3
-                self.p = 2
-
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-
-            elif self.var1.get() == 0 and self.var2.get() == 0 and self.var3.get() == 0 and self.var4.get() == 1 and self.var5.get() == 0 and self.var6.get() == 1:
-                self.ch = 4
-                self.p = 1
-
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-            elif self.var1.get() == 0 and self.var2.get() == 0 and self.var3.get() == 0 and self.var4.get() == 1 and self.var5.get() == 1 and self.var6.get() == 0:
-                self.ch = 4
-                self.p = 2
-
-                enter(self)
-                tor(self)
-                payment_option(self)
-                bill(self)
-
-            else:
-                self.Text1.insert(INSERT, "invalid choice please input a valid choice""\n")
+            
 
 
 
@@ -405,7 +339,16 @@ class HOTEL_MANGMENT_checkin:
         self.Frame2.configure(width=995)
 
         
-       
+      
+        
+
+        labelTest = Label(text="", font=('Helvetica', 12), fg='red')
+        labelTest.pack(side="top")
+
+        
+        
+    
+
         
         groupOne = StringVar()
         self.Entry3 = OptionMenu(self.Frame2,groupOne,*partGroup)
@@ -415,6 +358,8 @@ class HOTEL_MANGMENT_checkin:
         self.Entry3["menu"].configure(bg="white")
         self.Entry3.configure(textvariable=groupOne)
 
+        groupOne.trace("w", callback)
+        
         groupTwo = StringVar()
         self.Entry4 = OptionMenu(self.Frame2,groupTwo,*partGroup)
         self.mobile=StringVar()
@@ -438,10 +383,10 @@ class HOTEL_MANGMENT_checkin:
         self.Entry4.configure(background="white")
         self.Entry4["menu"].configure(bg="white")
         self.Entry4.configure(textvariable=groupFour)
+        
 
-        self.Label3 = Label(self.Frame2)
-
-        self.Label3.place(relx=0.68, rely=0.03, height=47, width=289)
+       
+        
 
         
         
@@ -530,44 +475,8 @@ class HOTEL_MANGMENT_checkin:
 
         
 
-        self.Button1 = Button(self.Frame2)
-        self.Button1.place(relx=0.91, rely=0.05, height=33, width=43)
-        self.Button1.configure(activebackground="#ffffff")
-        self.Button1.configure(activeforeground="#000000")
-        self.Button1.configure(background="#ffffff")
-        self.Button1.configure(disabledforeground="#bfbfbf")
-        self.Button1.configure(foreground="#000000")
-        self.Button1.configure(highlightbackground="#ffffff")
-        self.Button1.configure(highlightcolor="black")
-        self.Button1.configure(pady="0")
-        self.Button1.configure(text='''OK''')
-        self.Button1.configure(command=chk_name)
-
-        self.Button2 = Button(self.Frame2)
-        self.Button2.place(relx=0.91, rely=0.18, height=33, width=43)
-        self.Button2.configure(activebackground="#ffffff")
-        self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="#ffffff")
-        self.Button2.configure(disabledforeground="#bfbfbf")
-        self.Button2.configure(foreground="#000000")
-        self.Button2.configure(highlightbackground="#ffffff")
-        self.Button2.configure(highlightcolor="black")
-        self.Button2.configure(pady="0")
-        self.Button2.configure(text='''OK''')
-        self.Button2.configure(command=chk_add)
-
-        self.Button3 = Button(self.Frame2)
-        self.Button3.place(relx=0.91, rely=0.31, height=33, width=43)
-        self.Button3.configure(activebackground="#ffffff")
-        self.Button3.configure(activeforeground="#000000")
-        self.Button3.configure(background="#ffffff")
-        self.Button3.configure(disabledforeground="#bfbfbf")
-        self.Button3.configure(foreground="#000000")
-        self.Button3.configure(highlightbackground="#ffffff")
-        self.Button3.configure(highlightcolor="black")
-        self.Button3.configure(pady="0")
-        self.Button3.configure(text='''OK''')
-        self.Button3.configure(command=chk_mo)
+       
+        
 
         self.Button4 = Button(self.Frame2)
         self.Button4.place(relx=0.76, rely=0.66, height=83, width=156)
@@ -581,7 +490,7 @@ class HOTEL_MANGMENT_checkin:
         self.Button4.configure(highlightcolor="black")
         self.Button4.configure(pady="0")
         self.Button4.configure(text='''SUBMIT''')
-        self.Button4.configure(command=submit_clicked)
+        
 
         
 
@@ -598,18 +507,6 @@ class HOTEL_MANGMENT_checkin:
         self.Message8.configure(text=''':''')
         self.Message8.configure(width=26)
 
-        self.Button5 = Button(self.Frame2)
-        self.Button5.place(relx=0.91, rely=0.43, height=33, width=43)
-        self.Button5.configure(activebackground="#ffffff")
-        self.Button5.configure(activeforeground="#000000")
-        self.Button5.configure(background="#ffffff")
-        self.Button5.configure(disabledforeground="#bfbfbf")
-        self.Button5.configure(foreground="#000000")
-        self.Button5.configure(highlightbackground="#ffffff")
-        self.Button5.configure(highlightcolor="black")
-        self.Button5.configure(pady="0")
-        self.Button5.configure(text='''OK''')
-        self.Button5.configure(command=chk_day)
 
 
         root.mainloop()
