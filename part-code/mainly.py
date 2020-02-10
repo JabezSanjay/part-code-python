@@ -97,7 +97,7 @@ class HOTEL_MANAGEMENT:
         self.Message6.configure(width=791)
 
         self.Button2 = Button(self.Frame1)
-        self.Button2.place(relx=0.18, rely=0.17, height=103, width=566)
+        self.Button2.place(relx=0.37, rely=0.17, height=103, width=566)
         self.Button2.configure(activebackground="#4D555E")
         self.Button2.configure(activeforeground="#10273F")
         self.Button2.configure(background="#10273F")
@@ -114,7 +114,7 @@ class HOTEL_MANAGEMENT:
         self.Button2.configure(command=click_checkinn)
 
         self.Button3 = Button(self.Frame1)
-        self.Button3.place(relx=0.18, rely=0.33, height=93, width=566)
+        self.Button3.place(relx=0.37, rely=0.33, height=93, width=566)
         self.Button3.configure(activebackground="#4D555E")
         self.Button3.configure(activeforeground="#18395c")
         self.Button3.configure(background="#18395c")
@@ -131,7 +131,7 @@ class HOTEL_MANAGEMENT:
         self.Button3.configure(command=click_list)
 
         self.Button4 = Button(self.Frame1)
-        self.Button4.place(relx=0.18, rely=0.47, height=93, width=566)
+        self.Button4.place(relx=0.37, rely=0.47, height=93, width=566)
         self.Button4.configure(activebackground="#4D555E")
         self.Button4.configure(activeforeground="#214C7A")
         self.Button4.configure(background="#214C7A")
@@ -148,7 +148,7 @@ class HOTEL_MANAGEMENT:
         self.Button4.configure(command=click_checkout)
 
         self.Button5 = Button(self.Frame1)
-        self.Button5.place(relx=0.18, rely=0.61, height=103, width=566)
+        self.Button5.place(relx=0.37, rely=0.61, height=103, width=566)
         self.Button5.configure(activebackground="#4D555E")
         self.Button5.configure(activeforeground="#2D65A2")
         self.Button5.configure(background="#2D65A2")
@@ -165,7 +165,7 @@ class HOTEL_MANAGEMENT:
         self.Button5.configure(command=click_getinfo)
 
         self.Button6 = Button(self.Frame1)
-        self.Button6.place(relx=0.18, rely=0.77, height=103, width=566)
+        self.Button6.place(relx=0.37, rely=0.77, height=103, width=566)
         self.Button6.configure(activebackground="#4D555E")
         self.Button6.configure(activeforeground="#3F8ADB")
         self.Button6.configure(background="#3F8ADB")
