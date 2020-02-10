@@ -31,6 +31,9 @@ def click_checkout():
 def click_getinfo():
     call(["python", "getinfoui.py"])
 
+ 
+
+
 
 class HOTEL_MANAGEMENT:
     def __init__(self):
@@ -49,10 +52,24 @@ class HOTEL_MANAGEMENT:
         font9 = "-family {Segoe UI} -size 9 -weight normal -slant "  \
             "italic -underline 0 -overstrike 0"
 
+        def enter(event):
+         self.Button2.config(bg = "#ffffff" , fg = "#10273F")
+         self.Button3.config(bg = "#ffffff" , fg = "#18395c")
+         self.Button4.config(bg = "#ffffff" , fg = "#214C7A")
+         self.Button5.config(bg = "#ffffff" , fg = "#2D65A2")
+         self.Button6.config(bg = "#ffffff" , fg = "#3F8ADB")
+
+        def leave(event):
+         self.Button2.config(bg = "#10273F" , fg = "#ffffff")   
+         self.Button3.config(bg = "#18395c" , fg = "#ffffff")
+         self.Button4.config(bg = "#214C7A" , fg = "#ffffff")
+         self.Button5.config(bg = "#2D65A2" , fg = "#ffffff")
+         self.Button6.config(bg = "#3F8ADB" , fg = "#ffffff")
+        
         root.geometry("963x749+540+110")
         root.title("Part Code Generator")
-        root.configure(background="#d9d9d9")
-        root.configure(highlightbackground="#d9d9d9")
+        root.configure(background="#4D555E")
+        root.configure(highlightbackground="#4D555E")
         root.configure(highlightcolor="black")
 
         self.menubar = Menu(root, font=font9, bg=_bgcolor, fg=_fgcolor)
@@ -63,7 +80,7 @@ class HOTEL_MANAGEMENT:
         self.Frame1.configure(relief=GROOVE)
         self.Frame1.configure(borderwidth="2")
         self.Frame1.configure(relief=GROOVE)
-        self.Frame1.configure(background="#d9d9d9")
+        self.Frame1.configure(background="#4D555E")
         self.Frame1.configure(highlightbackground="#d9d9d9")
         self.Frame1.configure(highlightcolor="black")
         self.Frame1.configure(width=925)
@@ -71,7 +88,7 @@ class HOTEL_MANAGEMENT:
         self.Message6 = Message(self.Frame1)
         self.Message6.place(relx=0.09, rely=0.01,
                             relheight=0.15, relwidth=0.86)
-        self.Message6.configure(background="#d9d9d9")
+        self.Message6.configure(background="#4D555E")
         self.Message6.configure(font=font16)
         self.Message6.configure(foreground="#000000")
         self.Message6.configure(highlightbackground="#d9d9d9")
@@ -81,7 +98,7 @@ class HOTEL_MANAGEMENT:
 
         self.Button2 = Button(self.Frame1)
         self.Button2.place(relx=0.18, rely=0.17, height=103, width=566)
-        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activebackground="#4D555E")
         self.Button2.configure(activeforeground="#10273F")
         self.Button2.configure(background="#10273F")
         self.Button2.configure(disabledforeground="#bfbfbf")
@@ -90,13 +107,15 @@ class HOTEL_MANAGEMENT:
         self.Button2.configure(highlightbackground="#d9d9d9")
         self.Button2.configure(highlightcolor="black")
         self.Button2.configure(pady="0")
+        self.Button2.bind("<Enter>", enter)
+        self.Button2.bind("<Leave>", leave)
         self.Button2.configure(text='''1.PART CODE GENERATION''')
         self.Button2.configure(width=566)
         self.Button2.configure(command=click_checkinn)
 
         self.Button3 = Button(self.Frame1)
         self.Button3.place(relx=0.18, rely=0.33, height=93, width=566)
-        self.Button3.configure(activebackground="#ffffff")
+        self.Button3.configure(activebackground="#4D555E")
         self.Button3.configure(activeforeground="#18395c")
         self.Button3.configure(background="#18395c")
         self.Button3.configure(disabledforeground="#bfbfbf")
@@ -105,13 +124,15 @@ class HOTEL_MANAGEMENT:
         self.Button3.configure(highlightbackground="#d9d9d9")
         self.Button3.configure(highlightcolor="black")
         self.Button3.configure(pady="0")
+        self.Button3.bind("<Enter>", enter)
+        self.Button3.bind("<Leave>", leave)
         self.Button3.configure(text='''2.GENERATED CODES''')
         self.Button3.configure(width=566)
         self.Button3.configure(command=click_list)
 
         self.Button4 = Button(self.Frame1)
         self.Button4.place(relx=0.18, rely=0.47, height=93, width=566)
-        self.Button4.configure(activebackground="#ffffff")
+        self.Button4.configure(activebackground="#4D555E")
         self.Button4.configure(activeforeground="#214C7A")
         self.Button4.configure(background="#214C7A")
         self.Button4.configure(disabledforeground="#bfbfbf")
@@ -120,13 +141,15 @@ class HOTEL_MANAGEMENT:
         self.Button4.configure(highlightbackground="#d9d9d9")
         self.Button4.configure(highlightcolor="black")
         self.Button4.configure(pady="0")
+        self.Button4.bind("<Enter>", enter)
+        self.Button4.bind("<Leave>", leave)
         self.Button4.configure(text='''3.DELETE CODES''')
         self.Button4.configure(width=566)
         self.Button4.configure(command=click_checkout)
 
         self.Button5 = Button(self.Frame1)
         self.Button5.place(relx=0.18, rely=0.61, height=103, width=566)
-        self.Button5.configure(activebackground="#ffffff")
+        self.Button5.configure(activebackground="#4D555E")
         self.Button5.configure(activeforeground="#2D65A2")
         self.Button5.configure(background="#2D65A2")
         self.Button5.configure(disabledforeground="#bfbfbf")
@@ -135,13 +158,15 @@ class HOTEL_MANAGEMENT:
         self.Button5.configure(highlightbackground="#d9d9d9")
         self.Button5.configure(highlightcolor="black")
         self.Button5.configure(pady="0")
+        self.Button5.bind("<Enter>", enter)
+        self.Button5.bind("<Leave>", leave)
         self.Button5.configure(text='''4.CREDITS''')
         self.Button5.configure(width=566)
         self.Button5.configure(command=click_getinfo)
 
         self.Button6 = Button(self.Frame1)
         self.Button6.place(relx=0.18, rely=0.77, height=103, width=566)
-        self.Button6.configure(activebackground="#ffffff")
+        self.Button6.configure(activebackground="#4D555E")
         self.Button6.configure(activeforeground="#3F8ADB")
         self.Button6.configure(background="#3F8ADB")
         self.Button6.configure(disabledforeground="#bfbfbf")
@@ -150,6 +175,8 @@ class HOTEL_MANAGEMENT:
         self.Button6.configure(highlightbackground="#d9d9d9")
         self.Button6.configure(highlightcolor="black")
         self.Button6.configure(pady="0")
+        self.Button6.bind("<Enter>", enter)
+        self.Button6.bind("<Leave>", leave)
         self.Button6.configure(text='''5.EXIT''')
         self.Button6.configure(width=566)
         self.Button6.configure(command=quit)
