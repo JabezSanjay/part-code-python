@@ -97,9 +97,9 @@ class HOTEL_MANGMENT_checkin:
 
 
 
-        def callback(*args):
+        def submit_clicked(*args):
             labelTest.configure(text="The selected item is {}".format(groupOne.get()))
-
+            
         def chk_name():
             while True:
 
@@ -358,7 +358,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry3["menu"].configure(bg="white")
         self.Entry3.configure(textvariable=groupOne)
 
-        groupOne.trace("w", callback)
+        groupOne.trace("w", submit_clicked())
         
         groupTwo = StringVar()
         self.Entry4 = OptionMenu(self.Frame2,groupTwo,*partGroup)
@@ -490,7 +490,7 @@ class HOTEL_MANGMENT_checkin:
         self.Button4.configure(highlightcolor="black")
         self.Button4.configure(pady="0")
         self.Button4.configure(text='''SUBMIT''')
-        
+        self.Button4.configure(command=submit_clicked)
 
         
 
