@@ -11,6 +11,7 @@ try:
     from Tkinter import *
 except ImportError:
     from tkinter import *
+from tkinter import messagebox
 
 try:
     import ttk
@@ -48,15 +49,26 @@ def file_save():
 
 u = list()
 partGroup = ["Mild Steel",
-"Angle",
-"Channel",
-"Flat",
-"Sheet",
-"Plate",
-"Rod",
-"Joist",
-"Hatsection",
-"Channelsection",
+"Stainless Steel",
+"Galvanized Iron",
+"Aluminium",
+"Plywood",
+"Timber",
+"Cloth Items",
+"Paints",
+"Cushions",
+"Glass",
+"Auto Electricals",
+"Rubber Goods",
+"LaminatedSheets",
+"Pipes",
+"DoorMaterials",
+"PVC Items",
+"FRP Moulded Items",
+"Chemical Acids",
+"Insulation",
+"Lubricant Adhesives"
+
 ]
 mildSteel_1 = ["Angle", "Channel", "Flat", "Sheet", "Plate", "Rod", "Joist", "Hat section", "Channel section"]
 mildSteel_2 = ["Hot Rolled", "Cold Rolled", "Plain", "Round", "Square", "Chequered"]
@@ -127,7 +139,11 @@ class HOTEL_MANGMENT_checkin:
         
         def dynamic_change():
             part = groupOne.get()
-            if part == partGroup[0]:
+            if part == "":
+                messagebox.showerror("Error", "Please Enter A Value!")
+
+            elif part == partGroup[0]:
+                
                 groupTwo = StringVar()
                 self.Entry4 = OptionMenu(self.Frame2,groupTwo,*mildSteel_2)
                 self.mobile=StringVar()
@@ -151,6 +167,10 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry4.configure(background="white")
                 self.Entry4["menu"].configure(bg="white")
                 self.Entry4.configure(textvariable=groupFour)
+                
+                    
+                    
+
             
 
         
@@ -327,23 +347,6 @@ class HOTEL_MANGMENT_checkin:
         
         
     
-
-        groupThree = StringVar()
-        self.Entry3 = OptionMenu(self.Frame2,groupThree,*partGroup)
-        self.name=StringVar()
-        self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
-        self.Entry3.configure(background="white")
-        self.Entry3["menu"].configure(bg="white")
-        self.Entry3.configure(textvariable=groupThree)
-
-        groupFour = StringVar()
-        self.Entry4 = OptionMenu(self.Frame2,groupFour,*partGroup)
-        self.mobile=StringVar()
-        self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-        self.Entry4.configure(background="white")
-        self.Entry4["menu"].configure(bg="white")
-        self.Entry4.configure(textvariable=groupFour)
-        
 
        
         
