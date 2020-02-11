@@ -173,7 +173,7 @@ class HOTEL_MANGMENT_checkin:
                 groupTwo = StringVar()
                 self.Entry4 = OptionMenu(self.Frame2,groupTwo,*stainlessSteel)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry4.configure(background="white")
                 self.Entry4["menu"].configure(bg="white")
                 self.Entry4.configure(textvariable=groupTwo)
