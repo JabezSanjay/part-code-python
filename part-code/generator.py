@@ -125,8 +125,40 @@ class HOTEL_MANGMENT_checkin:
 
     def __init__(self):
         
+        def dynamic_change():
+            part = groupOne.get()
+            if part == partGroup[0]:
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*mildSteel_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupThree = StringVar()
+                self.Entry3 = OptionMenu(self.Frame2,groupThree,*mildSteel_3)
+                self.name=StringVar()
+                self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+                self.Entry3.configure(background="white")
+                self.Entry3["menu"].configure(bg="white")
+                self.Entry3.configure(textvariable=groupThree)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*mildSteel_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+
+        
+        
+        
         
         def submit_clicked(*args):
+            
             labelTest.configure(text="The selected item is {}".format(groupOne.get()))
             
        
@@ -284,20 +316,17 @@ class HOTEL_MANGMENT_checkin:
         self.Entry3["menu"].configure(bg="white")
         self.Entry3.configure(textvariable=groupOne)
 
+     
+
         groupOne.trace("w", submit_clicked())
 
-        if groupOne == partGroup[0]:
-            labelTest.configure(text="The selected item is {}".format(groupOne.get()))
+        
+        
+
 
         
         
-        groupTwo = StringVar()
-        self.Entry4 = OptionMenu(self.Frame2,groupTwo,*partGroup)
-        self.mobile=StringVar()
-        self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-        self.Entry4.configure(background="white")
-        self.Entry4["menu"].configure(bg="white")
-        self.Entry4.configure(textvariable=groupTwo)
+    
 
         groupThree = StringVar()
         self.Entry3 = OptionMenu(self.Frame2,groupThree,*partGroup)
@@ -319,7 +348,19 @@ class HOTEL_MANGMENT_checkin:
        
         
 
-        
+        self.Button2 = Button(self.Frame2)
+        self.Button2.place(relx=0.91, rely=0.05, height=33, width=43)
+        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activeforeground="#000000")
+        self.Button2.configure(background="#ffffff")
+        self.Button2.configure(disabledforeground="#bfbfbf")
+        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(highlightbackground="#ffffff")
+        self.Button2.configure(highlightcolor="black")
+        self.Button2.configure(pady="0")
+        self.Button2.configure(text='''OK''')
+        self.Button2.configure(command=dynamic_change)
+
         
         
 
