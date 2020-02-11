@@ -83,27 +83,27 @@ Plywood_1 = ["Plain", "Chequered"]
 Plywood_2 = ["B. W. R.", "W. W. R.", "O. S. T", "Commercial Marine"]
 Timber_1 = ["Ayini", "Karangi", "Silver Oak", "Rubber"]
 Timber_2 = ["Reaper", "Curves", "Planks"]
-ClothItems = ["Leather Cloth", "Vinyl Mats", "Carpets", "Other Fabric items"]
+ClothItems_1 = ["Leather Cloth", "Vinyl Mats", "Carpets", "Other Fabric items"]
 ClothItems_2 = ["Manufacturer"]
 ClothItems_3 = ["Shade", "Colour"] 
-Paints = ["Manufacturer"]
+Paints_1 = ["Manufacturer"]
 Paints_2 = ["Primers", "Base Paints", "Thinner", "Enamel", "Lacquer", "Poly Urethane", "Chlorinated Rubber", "Filler materials", "Other Addictive"]
 Paints_3 = ["Colour"]
-Cushions = ["Rubber", "Foam", "Coir"]
+Cushions_1 = ["Rubber", "Foam", "Coir"]
 Cushions_2 = ["Flat", "Taper", "Strip"]
-Glass = ["Toughened", "Laminated"]
+Glass_1 = ["Toughened", "Laminated"]
 Glass_2 = ["Flat", "Curved"]
 Glass_3 = ["Clear", "Smoke"]
-AutoElectricals = ["Wires", "Cables", "Chokes", "Stater", "Fuse Units", "Bulbs/Lamps"]
+AutoElectricals_1 = ["Wires", "Cables", "Chokes", "Stater", "Fuse Units", "Bulbs/Lamps"]
 AutoElectricals_2 = ["Manufacturer"]
 AutoElectricals_3 = ["Clear"]
 RubberGoods = ["Extrusions", "Sheets", "Tubes"]
-LaminatedSheets =["Shade"]
+LaminatedSheets_1 =["Shade"]
 LaminatedSheets_2 = ["Types of finish"]
-Pipes = ["M. S.", "ERW", "Stainless steel"]
+Pipes_1 = ["M. S.", "ERW", "Stainless steel"]
 Pipes_2 = ["Square Round"]
 DoorMaterials = ["Locks", "Handles", "Hinges", "Tower Bolts", "Padlock Items", "Door Assys", "Door closer", "Door padding Item", "Window material"]
-PVCItems = ["Sleeves", "Inserts", "Bushes", "Clips", "Grommets", "Packing Items", "Pipe Fittings"]
+PVCItems_1 = ["Sleeves", "Inserts", "Bushes", "Clips", "Grommets", "Packing Items", "Pipe Fittings"]
 PVCItems_2 = ["Colour", "Flat base", "Taper base", "Reducer", "Elbow", "Tee", "Cross", "Hex Nipple", "Dummy Plug", "Union", "Coupling", "Clamp", "Pipe"]
 FRPMouldedItems = ["Resin", "Mat", "Accelerator", "Catalyst"]
 ChemicalsAcids = ["Chemicals", "Acids"]
@@ -167,9 +167,327 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry4.configure(background="white")
                 self.Entry4["menu"].configure(bg="white")
                 self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[1]:
+
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*stainlessSteel)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+            
+            elif part == partGroup[2]:
                 
-                    
-                    
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*galvanizedIron_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*galvanizedIron_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            elif part == partGroup[3]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Aluminium_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupThree = StringVar()
+                self.Entry3 = OptionMenu(self.Frame2,groupThree,*Aluminium_3)
+                self.name=StringVar()
+                self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+                self.Entry3.configure(background="white")
+                self.Entry3["menu"].configure(bg="white")
+                self.Entry3.configure(textvariable=groupThree)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Aluminium_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[4]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Plywood_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Plywood_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[5]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Timber_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Timber_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[6]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*ClothItems_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupThree = StringVar()
+                self.Entry3 = OptionMenu(self.Frame2,groupThree,*ClothItems_3)
+                self.name=StringVar()
+                self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+                self.Entry3.configure(background="white")
+                self.Entry3["menu"].configure(bg="white")
+                self.Entry3.configure(textvariable=groupThree)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*ClothItems_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[7]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Paints_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupThree = StringVar()
+                self.Entry3 = OptionMenu(self.Frame2,groupThree,*Paints_3)
+                self.name=StringVar()
+                self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+                self.Entry3.configure(background="white")
+                self.Entry3["menu"].configure(bg="white")
+                self.Entry3.configure(textvariable=groupThree)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Paints_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[8]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Cushions_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Cushions_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[9]:
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Glass_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupThree = StringVar()
+                self.Entry3 = OptionMenu(self.Frame2,groupThree,*Glass_3)
+                self.name=StringVar()
+                self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+                self.Entry3.configure(background="white")
+                self.Entry3["menu"].configure(bg="white")
+                self.Entry3.configure(textvariable=groupThree)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Glass_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            elif part == partGroup[10]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*AutoElectricals_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupThree = StringVar()
+                self.Entry3 = OptionMenu(self.Frame2,groupThree,*AutoElectricals_3)
+                self.name=StringVar()
+                self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+                self.Entry3.configure(background="white")
+                self.Entry3["menu"].configure(bg="white")
+                self.Entry3.configure(textvariable=groupThree)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*AutoElectricals_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+
+            elif part == partGroup[11]:
+                
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*RubberGoods)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[12]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*LaminatedSheets_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*LaminatedSheets_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[13]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Pipes_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Pipes_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[14]:
+  
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*DoorMaterials)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[15]:
+                
+                groupTwo = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*PVCItems_2)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupTwo)
+
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*PVCItems_1)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[16]:
+                
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*FRPMouldedItems)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            elif part == partGroup[17]:
+ 
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*ChemicalsAcids)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[18]:
+ 
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Insulation)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
+            
+            elif part == partGroup[19]:
+ 
+                groupFour = StringVar()
+                self.Entry4 = OptionMenu(self.Frame2,groupFour,*LubricantsAdhesives)
+                self.mobile=StringVar()
+                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry4.configure(background="white")
+                self.Entry4["menu"].configure(bg="white")
+                self.Entry4.configure(textvariable=groupFour)
 
             
 
