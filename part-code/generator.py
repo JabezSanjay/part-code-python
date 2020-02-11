@@ -129,7 +129,7 @@ class HOTEL_MANGMENT_checkin:
             part = groupOne.get()
             if part == partGroup[0]:
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*mildSteel_1)
+                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*mildSteel_2)
                 self.mobile=StringVar()
                 self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry4.configure(background="white")
