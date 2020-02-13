@@ -70,6 +70,11 @@ partGroup = ["Mild Steel",
 "Lubricant Adhesives"
 
 ]
+
+partGroup_dict = {"Mild Steel" : "MS",
+"Stainless Steel" : "SS"
+ 
+}
 mildSteel_1 = ["Angle", "Channel", "Flat", "Sheet", "Plate", "Rod", "Joist", "Hat section", "Channel section"]
 mildSteel_2 = ["Hot Rolled", "Cold Rolled", "Plain", "Round", "Square", "Chequered"]
 mildSteel_3 = ["Polished", "Non- polish"]
@@ -136,8 +141,11 @@ class HOTEL_MANGMENT_checkin:
     
 
     def __init__(self):
+
+       
         
         def dynamic_change():
+            
             part = groupOne.get()
             if part == "":
                 messagebox.showerror("Error", "Please Enter A Value!")
@@ -170,6 +178,9 @@ class HOTEL_MANGMENT_checkin:
             
             elif part == partGroup[1]:
 
+              
+
+            
                 groupTwo = StringVar()
                 self.Entry4 = OptionMenu(self.Frame2,groupTwo,*stainlessSteel)
                 self.mobile=StringVar()
@@ -496,8 +507,13 @@ class HOTEL_MANGMENT_checkin:
         
         
         def submit_clicked(*args):
+            par = groupOne.get()
+            if par in partGroup_dict:
+                labelTest.configure(text="The selected item is {}".format(partGroup_dict[par]))
+
             
-            labelTest.configure(text="The selected item is {}".format(groupOne.get()))
+            
+            
             
        
         def bill(self):
