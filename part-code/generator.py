@@ -543,7 +543,8 @@ class HOTEL_MANGMENT_checkin:
 
             file_save()
 
-
+        
+            
 
 
             
@@ -564,7 +565,7 @@ class HOTEL_MANGMENT_checkin:
         _ana2color = '#ffffff' # X11 color: 'white'
         font10 = "-family {Courier New} -size 10 -weight normal -slant"  \
             " roman -underline 0 -overstrike 0"
-        font11 = "-family {Segoe UI} -size 30 -weight bold -slant "  \
+        font11 = "-family {Times New Roman} -size 28 -weight bold -slant "  \
             "roman -underline 0 -overstrike 0"
         font12 = "-family {Segoe UI} -size 18 -weight bold -slant "  \
             "roman -underline 0 -overstrike 0"
@@ -581,10 +582,24 @@ class HOTEL_MANGMENT_checkin:
 
         root.geometry("1069x742")
         root.title("PART CODE GENERATION")
-        root.configure(background="#ffffff")
+        root.configure(background="dark slate gray")
         root.configure(highlightbackground="#ffffff")
         root.configure(highlightcolor="black")
 
+        def enter(event):
+            self.Button4.configure(foreground="red")
+
+        def leave(event):
+            self.Button4.configure(foreground="#000000")    
+
+        
+
+        
+        
+        
+        
+        
+        
         self.Text1 = Text(root)
         self.Text1.place(relx=0.03, rely=0.65, relheight=0.29, relwidth=0.93)
         self.Text1.configure(background="white")
@@ -603,39 +618,20 @@ class HOTEL_MANGMENT_checkin:
         self.Frame1.configure(relief=GROOVE)
         self.Frame1.configure(borderwidth="2")
         self.Frame1.configure(relief=GROOVE)
-        self.Frame1.configure(background="#ffffff")
+        self.Frame1.configure(background="dark slate gray")
         self.Frame1.configure(highlightbackground="#ffffff")
         self.Frame1.configure(highlightcolor="black")
         self.Frame1.configure(width=995)
 
-        self.Message1 = Message(self.Frame1)
-        self.Message1.place(relx=0.04, rely=0.11, relheight=0.84, relwidth=0.5)
-        self.Message1.configure(background="#ffffff")
-        self.Message1.configure(font=font11)
-        self.Message1.configure(foreground="#000000")
-        self.Message1.configure(highlightbackground="#ffffff")
-        self.Message1.configure(highlightcolor="black")
-        self.Message1.configure(text='''YOU CLICKED ON''')
-        self.Message1.configure(width=496)
-
-        self.Message2 = Message(self.Frame1)
-        self.Message2.place(relx=0.52, rely=0.19, relheight=0.74, relwidth=0.07)
-        self.Message2.configure(background="#ffffff")
-        self.Message2.configure(font=font11)
-        self.Message2.configure(foreground="#000000")
-        self.Message2.configure(highlightbackground="#ffffff")
-        self.Message2.configure(highlightcolor="black")
-        self.Message2.configure(text=''':''')
-        self.Message2.configure(width=66)
-
+        
         self.Message3 = Message(self.Frame1)
-        self.Message3.place(relx=0.57, rely=0.11, relheight=0.79, relwidth=0.35)
-        self.Message3.configure(background="#ffffff")
+        self.Message3.place(relx=0.34, rely=0.11, relheight=0.79, relwidth=0.35)
+        self.Message3.configure(background="dark slate gray")
         self.Message3.configure(font=font11)
-        self.Message3.configure(foreground="#000000")
+        self.Message3.configure(foreground="DarkSlateGray4")
         self.Message3.configure(highlightbackground="#ffffff")
         self.Message3.configure(highlightcolor="black")
-        self.Message3.configure(text='''GENERATOR''')
+        self.Message3.configure(text=''' THE GENERATOR''')
         self.Message3.configure(width=347)
 
         self.menubar = Menu(root,font=font9,bg=_bgcolor,fg=_fgcolor)
@@ -648,7 +644,7 @@ class HOTEL_MANGMENT_checkin:
         self.Frame2.configure(relief=GROOVE)
         self.Frame2.configure(borderwidth="2")
         self.Frame2.configure(relief=GROOVE)
-        self.Frame2.configure(background="#ffffff")
+        self.Frame2.configure(background="dark slate gray")
         self.Frame2.configure(highlightbackground="#ffffff")
         self.Frame2.configure(highlightcolor="black")
         self.Frame2.configure(width=995)
@@ -666,7 +662,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry3 = OptionMenu(self.Frame2,groupOne,*partGroup)
         self.name=StringVar()
         self.Entry3.place(relx=0.47, rely=0.05,height=34, relwidth=0.43)
-        self.Entry3.configure(background="white")
+        self.Entry3.configure(background="white smoke")
         self.Entry3["menu"].configure(bg="white")
         self.Entry3.configure(textvariable=groupOne)
 
@@ -674,14 +670,21 @@ class HOTEL_MANGMENT_checkin:
 
         groupOne.trace("w", submit_clicked())
 
+        
+
+
+       
+
+        
         groupTwo = StringVar()
         self.Entry4 = Entry(self.Frame2)
         self.mobile=StringVar()
         self.Entry4.place(relx=0.47, rely=0.60,height=34, relwidth=0.10)
-        self.Entry4.configure(background="white")
+        self.Entry4.configure(background="white smoke")
+               
         
         self.Entry4.configure(textvariable=groupTwo)
-
+ 
 
         
 
@@ -689,7 +692,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry4 = Entry(self.Frame2)
         self.mobile=StringVar()
         self.Entry4.place(relx=0.57, rely=0.60,height=34, relwidth=0.10)
-        self.Entry4.configure(background="white")
+        self.Entry4.configure(background="white smoke")
         
         self.Entry4.configure(textvariable=groupTwo)
 
@@ -700,7 +703,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry4 = Entry(self.Frame2)
         self.mobile=StringVar()
         self.Entry4.place(relx=0.67, rely=0.60,height=34, relwidth=0.10)
-        self.Entry4.configure(background="white")
+        self.Entry4.configure(background="white smoke")
         
         self.Entry4.configure(textvariable=groupTwo)
 
@@ -710,7 +713,6 @@ class HOTEL_MANGMENT_checkin:
 
         
         
-    
 
        
         
@@ -719,7 +721,7 @@ class HOTEL_MANGMENT_checkin:
         self.Button2.place(relx=0.91, rely=0.05, height=33, width=43)
         self.Button2.configure(activebackground="#ffffff")
         self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="#ffffff")
+        self.Button2.configure(background="white smoke")
         self.Button2.configure(disabledforeground="#bfbfbf")
         self.Button2.configure(foreground="#000000")
         self.Button2.configure(highlightbackground="#ffffff")
@@ -735,7 +737,7 @@ class HOTEL_MANGMENT_checkin:
         self.Label3.place(relx=0.05, rely=0.03, height=47, width=289)
         self.Label3.configure(activebackground="#ffffff")
         self.Label3.configure(activeforeground="black")
-        self.Label3.configure(background="#ffffff")
+        self.Label3.configure(background="dark slate gray")
         self.Label3.configure(disabledforeground="#bfbfbf")
         self.Label3.configure(font=font12)
         self.Label3.configure(foreground="#000000")
@@ -747,7 +749,7 @@ class HOTEL_MANGMENT_checkin:
         self.Label5.place(relx=0.05, rely=0.16, height=47, width=334)
         self.Label5.configure(activebackground="#ffffff")
         self.Label5.configure(activeforeground="black")
-        self.Label5.configure(background="#ffffff")
+        self.Label5.configure(background="dark slate gray")
         self.Label5.configure(disabledforeground="#bfbfbf")
         self.Label5.configure(font=font12)
         self.Label5.configure(foreground="#000000")
@@ -759,7 +761,7 @@ class HOTEL_MANGMENT_checkin:
         self.Label4.place(relx=0.05, rely=0.29, height=47, width=329)
         self.Label4.configure(activebackground="#ffffff")
         self.Label4.configure(activeforeground="black")
-        self.Label4.configure(background="#ffffff")
+        self.Label4.configure(background="dark slate gray")
         self.Label4.configure(disabledforeground="#bfbfbf")
         self.Label4.configure(font=font12)
         self.Label4.configure(foreground="#000000")
@@ -769,7 +771,7 @@ class HOTEL_MANGMENT_checkin:
 
         self.Label1 = Label(self.Frame2)
         self.Label1.place(relx=0.05, rely=0.43, height=47, width=334)
-        self.Label1.configure(background="#ffffff")
+        self.Label1.configure(background="dark slate gray")
         self.Label1.configure(disabledforeground="#bfbfbf")
         self.Label1.configure(font=font12)
         self.Label1.configure(foreground="#000000")
@@ -779,7 +781,7 @@ class HOTEL_MANGMENT_checkin:
         self.Label5.place(relx=0.05, rely=0.58, height=47, width=334)
         self.Label5.configure(activebackground="#ffffff")
         self.Label5.configure(activeforeground="black")
-        self.Label5.configure(background="#ffffff")
+        self.Label5.configure(background="dark slate gray")
         self.Label5.configure(disabledforeground="#bfbfbf")
         self.Label5.configure(font=font12)
         self.Label5.configure(foreground="#000000")
@@ -789,7 +791,7 @@ class HOTEL_MANGMENT_checkin:
 
         self.Message5 = Message(self.Frame2)
         self.Message5.place(relx=0.42, rely=0.58, relheight=0.12, relwidth=0.03)
-        self.Message5.configure(background="#ffffff")
+        self.Message5.configure(background="dark slate gray")
         self.Message5.configure(font=font13)
         self.Message5.configure(foreground="#000000")
         self.Message5.configure(highlightbackground="#ffffff")
@@ -804,7 +806,7 @@ class HOTEL_MANGMENT_checkin:
 
         self.Message4 = Message(self.Frame2)
         self.Message4.place(relx=0.41, rely=0.04, relheight=0.1, relwidth=0.05)
-        self.Message4.configure(background="#ffffff")
+        self.Message4.configure(background="dark slate gray")
         self.Message4.configure(font=font13)
         self.Message4.configure(foreground="#000000")
         self.Message4.configure(highlightbackground="#ffffff")
@@ -814,7 +816,7 @@ class HOTEL_MANGMENT_checkin:
 
         self.Message5 = Message(self.Frame2)
         self.Message5.place(relx=0.42, rely=0.17, relheight=0.12, relwidth=0.03)
-        self.Message5.configure(background="#ffffff")
+        self.Message5.configure(background="dark slate gray")
         self.Message5.configure(font=font13)
         self.Message5.configure(foreground="#000000")
         self.Message5.configure(highlightbackground="#ffffff")
@@ -824,7 +826,7 @@ class HOTEL_MANGMENT_checkin:
 
         self.Message6 = Message(self.Frame2)
         self.Message6.place(relx=0.415, rely=0.3, relheight=0.09, relwidth=0.04)
-        self.Message6.configure(background="#ffffff")
+        self.Message6.configure(background="dark slate gray")
         self.Message6.configure(font=font13)
         self.Message6.configure(foreground="#000000")
         self.Message6.configure(highlightbackground="#ffffff")
@@ -843,13 +845,15 @@ class HOTEL_MANGMENT_checkin:
         self.Button4.place(relx=0.76, rely=0.72, height=83, width=156)
         self.Button4.configure(activebackground="#ffffff")
         self.Button4.configure(activeforeground="#000000")
-        self.Button4.configure(background="#ffffff")
+        self.Button4.configure(background="white smoke")
         self.Button4.configure(disabledforeground="#bfbfbf")
         self.Button4.configure(font=font16)
         self.Button4.configure(foreground="#000000")
         self.Button4.configure(highlightbackground="#ffffff")
         self.Button4.configure(highlightcolor="black")
         self.Button4.configure(pady="0")
+        self.Button4.bind("<Enter>", enter)
+        self.Button4.bind("<Leave>", leave)
         self.Button4.configure(text='''SUBMIT''')
         self.Button4.configure(command=submit_clicked)
 
@@ -860,7 +864,7 @@ class HOTEL_MANGMENT_checkin:
 
         self.Message8 = Message(self.Frame2)
         self.Message8.place(relx=0.42, rely=0.41, relheight=0.11, relwidth=0.03)
-        self.Message8.configure(background="#ffffff")
+        self.Message8.configure(background="dark slate gray")
         self.Message8.configure(font=font13)
         self.Message8.configure(foreground="#000000")
         self.Message8.configure(highlightbackground="#ffffff")
