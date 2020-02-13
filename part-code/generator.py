@@ -507,9 +507,9 @@ class HOTEL_MANGMENT_checkin:
         
         
         def submit_clicked(*args):
-            par = groupOne.get()
-            if par in partGroup_dict:
-                labelTest.configure(text="The selected item is {}".format(partGroup_dict[par]))
+            part_1 = groupOne.get()
+            if part_1 in partGroup_dict:
+                labelTest.configure(text="The selected item is {}".format(partGroup_dict[part_1]))
 
             
             
@@ -674,6 +674,36 @@ class HOTEL_MANGMENT_checkin:
 
         groupOne.trace("w", submit_clicked())
 
+        groupTwo = StringVar()
+        self.Entry4 = Entry(self.Frame2)
+        self.mobile=StringVar()
+        self.Entry4.place(relx=0.47, rely=0.60,height=34, relwidth=0.10)
+        self.Entry4.configure(background="white")
+        
+        self.Entry4.configure(textvariable=groupTwo)
+
+
+        
+
+        groupTwo = StringVar()
+        self.Entry4 = Entry(self.Frame2)
+        self.mobile=StringVar()
+        self.Entry4.place(relx=0.57, rely=0.60,height=34, relwidth=0.10)
+        self.Entry4.configure(background="white")
+        
+        self.Entry4.configure(textvariable=groupTwo)
+
+
+        
+
+        groupTwo = StringVar()
+        self.Entry4 = Entry(self.Frame2)
+        self.mobile=StringVar()
+        self.Entry4.place(relx=0.67, rely=0.60,height=34, relwidth=0.10)
+        self.Entry4.configure(background="white")
+        
+        self.Entry4.configure(textvariable=groupTwo)
+
         
         
 
@@ -745,6 +775,28 @@ class HOTEL_MANGMENT_checkin:
         self.Label1.configure(foreground="#000000")
         self.Label1.configure(text='''SUB GROUP 3''')
 
+        self.Label5 = Label(self.Frame2)
+        self.Label5.place(relx=0.05, rely=0.58, height=47, width=334)
+        self.Label5.configure(activebackground="#ffffff")
+        self.Label5.configure(activeforeground="black")
+        self.Label5.configure(background="#ffffff")
+        self.Label5.configure(disabledforeground="#bfbfbf")
+        self.Label5.configure(font=font12)
+        self.Label5.configure(foreground="#000000")
+        self.Label5.configure(highlightbackground="#ffffff")
+        self.Label5.configure(highlightcolor="black")
+        self.Label5.configure(text='''DIMENSIONS (LxBxH)''')
+
+        self.Message5 = Message(self.Frame2)
+        self.Message5.place(relx=0.42, rely=0.58, relheight=0.12, relwidth=0.03)
+        self.Message5.configure(background="#ffffff")
+        self.Message5.configure(font=font13)
+        self.Message5.configure(foreground="#000000")
+        self.Message5.configure(highlightbackground="#ffffff")
+        self.Message5.configure(highlightcolor="black")
+        self.Message5.configure(text=''':''')
+        self.Message5.configure(width=26)
+
         
 
         
@@ -788,7 +840,7 @@ class HOTEL_MANGMENT_checkin:
         
 
         self.Button4 = Button(self.Frame2)
-        self.Button4.place(relx=0.76, rely=0.66, height=83, width=156)
+        self.Button4.place(relx=0.76, rely=0.72, height=83, width=156)
         self.Button4.configure(activebackground="#ffffff")
         self.Button4.configure(activeforeground="#000000")
         self.Button4.configure(background="#ffffff")
