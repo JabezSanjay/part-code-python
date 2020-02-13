@@ -628,7 +628,7 @@ class HOTEL_MANGMENT_checkin:
         self.Message3.place(relx=0.34, rely=0.11, relheight=0.79, relwidth=0.35)
         self.Message3.configure(background="dark slate gray")
         self.Message3.configure(font=font11)
-        self.Message3.configure(foreground="DarkSlateGray4")
+        self.Message3.configure(foreground="gray10")
         self.Message3.configure(highlightbackground="#ffffff")
         self.Message3.configure(highlightcolor="black")
         self.Message3.configure(text=''' THE GENERATOR''')
