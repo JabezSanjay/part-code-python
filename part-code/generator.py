@@ -71,10 +71,73 @@ partGroup = ["Mild Steel",
 
 ]
 
-partGroup_dict = {"Mild Steel" : "MS",
-"Stainless Steel" : "SS"
+partGroup_dict = {"Mild Steel" : "MS", "Stainless Steel" : "SS" , "Galvanized Iron" : "GI", "Aluminium" : "AL", "Plywood" : "PW", "Timber" : "TI", "Cloth Items" : "CL", "Paints" : "PA", "Cushions" : "CU", "Glass" : "GL", "Auto Electricals" : "AE", "Rubber Goods" : "RG", "Laminated sheets" : "LS", "Pipes" : "PI", "Fasteners" : "FA", "Door Materials" : "DM", "PVC Items" : "PV", "FRP Moulded items" : "FR", "Chemicals & Acids" : "CH", "Insulation" : "IN", "Lubricants & Adhesives" : "LS"}
  
-}
+
+MildSteel_1 = {"Angle"   : 1, "Channel" : 2, "Flat" : 3, "Sheet" : 4, "Plate" : 5, "Rod" : "6", "Joist" : "7", "Hat section" : "8", "Channel section" : "9"}
+MildSteel_2 = {"Hot Rolled (H)" : "1", "Cold Rolled (C)" : "2", "Plain" : "3", "Round" : "4", "Square" : "5", "Chequered" : "6"}
+MildSteel_3 = {"Polished" : "1", "Non-polish" : "2"}
+
+StainlessSteel_1 = {"Sheet" : "1", "Coil" : "2"}
+
+GalvanizedIron_1 = {"Sheet" : "1", "Wire" : "2", "Pipe"  : "3" , "Fittings" : "4"}  	   
+GalvanizedIron_2 = {"Plain" : "1", "Corrugated" : "2", "PVC Coated" : "3", "Reducer" : "4", "Elbow" : "5", "Tee" : "6", "Cross" : "7", "Hex Nipple" : "8", "Dummy Plug" : "9", "Union" : "10", "Coupling" : "11", "Clamp" : "12", "Pipe" : "13"}  	
+
+Aluminium_1 = {"Extrusions" : "1", "Sheet" : "2", "Plate": "3", "Coil" : "4"}
+Aluminium_2 = {"Plain" : "1", "Chequered" : "2"}
+Aluminium_3 = {"Polished" : "1", "Non-Polish PVC Coated" : "2"}
+
+Plywood_1 = {"Plain" : "1", "Chequered" : "2"}
+Plywood_2 = {"B. W. R." : "1", "W. W. R." : "2", "O. S. T." : "3", "Commercial Marine" : "4"}
+
+Timber_1 = {"Ayini" : "1", "Karangi" : "2", "Silver Oak" : "3", "Rubber": "4"}
+Timber_2 = {"Reaper" : "1", "Curves" : "2", "Planks" : "3"}
+
+ClothItems_1 = {"Leather Cloth" : "1", "Vinyl Mats" : "2", "Carpets" : "3", "Other Fabricitems" : "4"}
+ClothItems_2 =  {"Manufacturer" : "1"}
+ClothItems_3 = {"Shade" : "1", "Colour" : "2"}
+
+Paints_1 = {"Manufacturer" : "1"}
+Paints_2 = {"Primers" : "1", "Base Paints" : "2", "Thinner" : "3", "Enamel" : "4", "Lacquer" : "5", "Poly Urethane" : "6", "Chlorinated Rubber" : "7", "Filler materials" : "8", "Other Addictive" : "9"}
+Paints_3 = {"Colour" : "1"}
+
+Cushions_1 = {"Rubber" : "1", "Foam" : "2", "Coir" : "3"}
+Cushions_2 = {"Flat" : "1", "Taper" : "2", "Strip" : "3"}
+
+Glass_1 = {"Toughened" : "1", "Laminated" : "2"}
+Glass_2 = {"Flat" : "1", "Curved" : "2"}
+Glass_3 ={"Clear" : "1", "Smoke" : "2"}
+
+AutoElectricals_1 = {"Wires" : "1", "Cables" : "2", "Chokes" : "3", "Stater" : "4", "Fuse Units" : "5", "Bulbs/Lamps" : "6"}
+AutoElectricals_2 = {"Manufacturer" : "1"}
+
+RubberGoods_1 = {"Extrusions" : "1", "Sheets" : "2", "Tubes": "3"}
+RubberGoods_2 = {"Sire" : "1", "EPDM" : "2"}
+
+
+LaminatedSheets_1 = {"Shade" : "1"}
+LaminatedSheets_2 = {"Types of finish" : "1"}
+
+
+Pipes_1 = {"M. S." : "1", "ERW" : "2", "Stainless steel" : "3"}
+Pipes_2 = {"Square Round" : "1"}
+
+
+DoorMaterials_1 = {"Locks" : "1", "Handles" : "2", "Hinges" : "3", "Tower Bolts" : "4", "padlock Items" : "5", "Door Assys" : "6", "Door closer" : "7", "Door padding Item" : "8", "Window material" : "9"}
+
+PVCItems_1 = {"Sleeves" : "1", "Inserts" : "2", "Bushes" : "3", "Clips" : "4", "Grommets" : "5", "Packing Items" : "6", "Pipe Fittings" : "7"}
+PVCItems_2 = { "Colour" : "1", "Flat base" : "2", "Taper base" : "3",  "Reducer" : "4", "Elbow" : "5", "Tee" : "6", "Cross" : "7", "Hex Nipple" : "8", "Dummy Plug" : "9", "Union" : "10",  "Coupling" : "11", "Clamp" : "12", "Pipe" : "13"}
+
+
+FRPMouldedItems_1 = {"Resin" : "1", "Mat" : "2", "Accelerator" : "3", "Catalyst" : "4"}
+
+
+ChemicalsAcids_1 = {"Chemicals" : "1", "Acids" : "2"}
+
+
+Insulation_1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocole" : "3"}
+
+LubricantsAdhesives_1 = {"Pastes" : "1","Sealants" : "2", "Oils" : "3", "Grease" : "4"}
 mildSteel_1 = ["Angle", "Channel", "Flat", "Sheet", "Plate", "Rod", "Joist", "Hat section", "Channel section"]
 mildSteel_2 = ["Hot Rolled", "Cold Rolled", "Plain", "Round", "Square", "Chequered"]
 mildSteel_3 = ["Polished", "Non- polish"]
