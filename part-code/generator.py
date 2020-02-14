@@ -1,4 +1,3 @@
-
 import os
 import pickle
 import sys
@@ -12,7 +11,7 @@ try:
 except ImportError:
     from tkinter import *
 from tkinter import messagebox
-
+from tkinter.ttk import Combobox
 try:
     import ttk
     py3 = False
@@ -45,7 +44,7 @@ def file_save():
 
 
 
-
+new = ["hi","hello"]
 
 u = list()
 partGroup = ["Mild Steel",
@@ -72,9 +71,10 @@ partGroup = ["Mild Steel",
 ]
 
 partGroup_dict = {"Mild Steel" : "MS", "Stainless Steel" : "SS" , "Galvanized Iron" : "GI", "Aluminium" : "AL", "Plywood" : "PW", "Timber" : "TI", "Cloth Items" : "CL", "Paints" : "PA", "Cushions" : "CU", "Glass" : "GL", "Auto Electricals" : "AE", "Rubber Goods" : "RG", "Laminated sheets" : "LS", "Pipes" : "PI", "Fasteners" : "FA", "Door Materials" : "DM", "PVC Items" : "PV", "FRP Moulded items" : "FR", "Chemicals & Acids" : "CH", "Insulation" : "IN", "Lubricants & Adhesives" : "LS"}
- 
 
-MildSteel_1 = {"Angle"   : 1, "Channel" : 2, "Flat" : 3, "Sheet" : 4, "Plate" : 5, "Rod" : "6", "Joist" : "7", "Hat section" : "8", "Channel section" : "9"}
+
+
+MildSteel_1 = {"Angle"   : "1", "Channel" : "2", "Flat" : "3", "Sheet" : "4", "Plate" : "5", "Rod" : "6", "Joist" : "7", "Hat section" : "8", "Channel section" : "9"}
 MildSteel_2 = {"Hot Rolled (H)" : "1", "Cold Rolled (C)" : "2", "Plain" : "3", "Round" : "4", "Square" : "5", "Chequered" : "6"}
 MildSteel_3 = {"Polished" : "1", "Non-polish" : "2"}
 
@@ -216,365 +216,373 @@ class HOTEL_MANGMENT_checkin:
             elif part == partGroup[0]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*mildSteel_2)
+                self.Entry2 = Combobox(self.Frame2,values=mildSteel_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = OptionMenu(self.Frame2,groupThree,*mildSteel_3)
+                self.Entry3 = Combobox(self.Frame2,values=mildSteel_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3["menu"].configure(bg="white")
+                
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*mildSteel_1)
+                self.Entry1 = Combobox(self.Frame2,values=mildSteel_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                
+                self.Entry1.configure(textvariable=groupFour)
+
+                
             
             elif part == partGroup[1]:
 
-              
-
-            
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*stainlessSteel)
+                self.Entry1 = Combobox(self.Frame2,values=stainlessSteel)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupTwo)
+                
             
             elif part == partGroup[2]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*galvanizedIron_2)
+                self.Entry2 = Combobox(self.Frame2,values=galvanizedIron_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*galvanizedIron_1)
+                self.Entry1 = Combobox(self.Frame2,values=galvanizedIron_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             elif part == partGroup[3]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Aluminium_2)
+                self.Entry2 = Combobox(self.Frame2,values=Aluminium_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = OptionMenu(self.Frame2,groupThree,*Aluminium_3)
+                self.Entry3 = Combobox(self.Frame2,values=Aluminium_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3["menu"].configure(bg="white")
+                self.Entry3.configure(bg="white")
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Aluminium_1)
+                self.Entry1 = Combobox(self.Frame2,values=Aluminium_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[4]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Plywood_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*Plywood_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Plywood_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*Plywood_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[5]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Timber_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*Timber_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Timber_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*Timber_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[6]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*ClothItems_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*ClothItems_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = OptionMenu(self.Frame2,groupThree,*ClothItems_3)
+                self.Entry3 = Combobox(self.Frame2,groupThree,*ClothItems_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3["menu"].configure(bg="white")
+                self.Entry3configure(bg="white")
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*ClothItems_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*ClothItems_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[7]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Paints_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*Paints_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = OptionMenu(self.Frame2,groupThree,*Paints_3)
+                self.Entry3 = Combobox(self.Frame2,groupThree,*Paints_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3["menu"].configure(bg="white")
+                self.Entry3configure(bg="white")
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Paints_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*Paints_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[8]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Cushions_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*Cushions_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Cushions_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*Cushions_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[9]:
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Glass_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*Glass_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = OptionMenu(self.Frame2,groupThree,*Glass_3)
+                self.Entry3 = Combobox(self.Frame2,groupThree,*Glass_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3["menu"].configure(bg="white")
+                self.Entry3configure(bg="white")
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Glass_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*Glass_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             elif part == partGroup[10]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*AutoElectricals_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*AutoElectricals_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = OptionMenu(self.Frame2,groupThree,*AutoElectricals_3)
+                self.Entry3 = Combobox(self.Frame2,groupThree,*AutoElectricals_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3["menu"].configure(bg="white")
+                self.Entry3configure(bg="white")
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*AutoElectricals_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*AutoElectricals_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
 
             elif part == partGroup[11]:
                 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*RubberGoods)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*RubberGoods)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[12]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*LaminatedSheets_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*LaminatedSheets_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*LaminatedSheets_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*LaminatedSheets_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[13]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*Pipes_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*Pipes_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Pipes_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*Pipes_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[14]:
   
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*DoorMaterials)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*DoorMaterials)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[15]:
                 
                 groupTwo = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupTwo,*PVCItems_2)
+                self.Entry2 = Combobox(self.Frame2,groupTwo,*PVCItems_2)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupTwo)
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                self.Entry2.configure(bg="white")
+                self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*PVCItems_1)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*PVCItems_1)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[16]:
                 
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*FRPMouldedItems)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*FRPMouldedItems)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             elif part == partGroup[17]:
  
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*ChemicalsAcids)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*ChemicalsAcids)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[18]:
  
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*Insulation)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*Insulation)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[19]:
  
                 groupFour = StringVar()
-                self.Entry4 = OptionMenu(self.Frame2,groupFour,*LubricantsAdhesives)
+                self.Entry1 = Combobox(self.Frame2,groupFour,*LubricantsAdhesives)
                 self.mobile=StringVar()
-                self.Entry4.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry4.configure(background="white")
-                self.Entry4["menu"].configure(bg="white")
-                self.Entry4.configure(textvariable=groupFour)
+                self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+                self.Entry1.configure(background="white")
+                self.Entry1.configure(bg="white")
+                self.Entry1.configure(textvariable=groupFour)
 
+        
+
+        
+        
+        
+        
+        def submit_clicked():
             
-
-        
-        
-        
-        
-        def submit_clicked(*args):
             part_1 = groupOne.get()
-            if part_1 in partGroup_dict:
-                labelTest.configure(text="The selected item is {}".format(partGroup_dict[part_1]))
-
+            part_2 = self.Entry1.get()
+            part_3 = self.Entry2.get()
+            part_4 = self.Entry3.get()
             
+            labelTest.configure(text="The Part Code is {} - {}".format(partGroup_dict[part_1],))
+                
+                
+        
+          
+        '''def store_variable():
+            groupFour = StringVar()'''
             
             
             
@@ -722,21 +730,109 @@ class HOTEL_MANGMENT_checkin:
         
         
         groupOne = StringVar()
-        self.Entry3 = OptionMenu(self.Frame2,groupOne,*partGroup)
+        self.Entry0 = Combobox(self.Frame2,values=partGroup)
         self.name=StringVar()
-        self.Entry3.place(relx=0.47, rely=0.05,height=34, relwidth=0.43)
-        self.Entry3.configure(background="white smoke")
-        self.Entry3["menu"].configure(bg="white")
-        self.Entry3.configure(textvariable=groupOne)
+        self.Entry0.place(relx=0.47, rely=0.05,height=34, relwidth=0.43)
+        self.Entry0.configure(background="white smoke")
+        
+        self.Entry0.configure(textvariable=groupOne)
 
-     
+        groupTwo = StringVar()
+        self.Entry2 = Combobox(self.Frame2,values=mildSteel_2)
+        self.mobile=StringVar()
+        self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+        self.Entry2.configure(background="white")
+                
+        self.Entry2.configure(textvariable=groupTwo)
 
-        groupOne.trace("w", submit_clicked())
+        groupThree = StringVar()
+        self.Entry3 = Combobox(self.Frame2,values=mildSteel_3)
+        self.name=StringVar()
+        self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
+        self.Entry3.configure(background="white")
+                
+        self.Entry3.configure(textvariable=groupThree)
+
+        groupFour = StringVar()
+        self.Entry1 = Combobox(self.Frame2,values=mildSteel_1)
+        self.mobile=StringVar()
+        self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
+        self.Entry1.configure(background="white")
+                
+        self.Entry1.configure(textvariable=groupFour)
+
+
 
         
 
+        self.Button2 = Button(self.Frame2)
+        self.Button2.place(relx=0.91, rely=0.05, height=33, width=43)
+        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activeforeground="#000000")
+        self.Button2.configure(background="white smoke")
+        self.Button2.configure(disabledforeground="#bfbfbf")
+        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(highlightbackground="#ffffff")
+        self.Button2.configure(highlightcolor="black")
+        self.Button2.configure(pady="0")
+        self.Button2.configure(text='''OK''')
+        self.Button2.configure(command=dynamic_change)
 
-       
+        '''self.Button2 = Button(self.Frame2)
+        self.Button2.place(relx=0.91, rely=0.19, height=33, width=43)
+        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activeforeground="#000000")
+        self.Button2.configure(background="white smoke")
+        self.Button2.configure(disabledforeground="#bfbfbf")
+        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(highlightbackground="#ffffff")
+        self.Button2.configure(highlightcolor="black")
+        self.Button2.configure(pady="0")
+        self.Button2.configure(text=OK)
+        self.Button2.configure(command=dynamic_change)
+
+        self.Button2 = Button(self.Frame2)
+        self.Button2.place(relx=0.91, rely=0.31, height=33, width=43)
+        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activeforeground="#000000")
+        self.Button2.configure(background="white smoke")
+        self.Button2.configure(disabledforeground="#bfbfbf")
+        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(highlightbackground="#ffffff")
+        self.Button2.configure(highlightcolor="black")
+        self.Button2.configure(pady="0")
+        self.Button2.configure(text=OK)
+        self.Button2.configure(command=dynamic_change)
+        
+        self.Button2 = Button(self.Frame2)
+        self.Button2.place(relx=0.91, rely=0.44, height=33, width=43)
+        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activeforeground="#000000")
+        self.Button2.configure(background="white smoke")
+        self.Button2.configure(disabledforeground="#bfbfbf")
+        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(highlightbackground="#ffffff")
+        self.Button2.configure(highlightcolor="black")
+        self.Button2.configure(pady="0")
+        self.Button2.configure(text=OK)
+        self.Button2.configure(command=dynamic_change)
+
+        self.Button2 = Button(self.Frame2)
+        self.Button2.place(relx=0.91, rely=0.59, height=33, width=43)
+        self.Button2.configure(activebackground="#ffffff")
+        self.Button2.configure(activeforeground="#000000")
+        self.Button2.configure(background="white smoke")
+        self.Button2.configure(disabledforeground="#bfbfbf")
+        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(highlightbackground="#ffffff")
+        self.Button2.configure(highlightcolor="black")
+        self.Button2.configure(pady="0")
+        self.Button2.configure(text=OK)
+        self.Button2.configure(command=dynamic_change)'''
+        
+
+
+        
 
         
         groupTwo = StringVar()
@@ -780,18 +876,7 @@ class HOTEL_MANGMENT_checkin:
        
         
 
-        self.Button2 = Button(self.Frame2)
-        self.Button2.place(relx=0.91, rely=0.05, height=33, width=43)
-        self.Button2.configure(activebackground="#ffffff")
-        self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="white smoke")
-        self.Button2.configure(disabledforeground="#bfbfbf")
-        self.Button2.configure(foreground="#000000")
-        self.Button2.configure(highlightbackground="#ffffff")
-        self.Button2.configure(highlightcolor="black")
-        self.Button2.configure(pady="0")
-        self.Button2.configure(text='''OK''')
-        self.Button2.configure(command=dynamic_change)
+        
 
         
         
@@ -942,9 +1027,3 @@ class HOTEL_MANGMENT_checkin:
 
 if __name__ == '__main__':
     hotel=HOTEL_MANGMENT_checkin()
-
-
-
-
-
-
