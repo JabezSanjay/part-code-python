@@ -3,6 +3,7 @@ import pickle
 import sys
 import os
 from subprocess import call
+from PIL import Image, ImageTk
 
 import sys
 
@@ -251,12 +252,13 @@ class HOTEL_MANGMENT_checkin:
             elif part == partGroup[1]:
 
                 groupTwo = StringVar()
-                self.Entry1 = Combobox(self.Frame2,values=stainlessSteel)
+                self.Entry1 = Combobox(self.Frame2,values=StainlessSteel_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
                 
                 self.Entry1.configure(textvariable=groupTwo)
+                
                 
             
             elif part == partGroup[2]:
@@ -593,6 +595,7 @@ class HOTEL_MANGMENT_checkin:
             part_5 = self.Entry5.get()
             part_6 = self.Entry6.get()
             part_7 = self.Entry7.get()
+        
             
             
             if part_1 == partGroup[0]:
@@ -616,6 +619,21 @@ class HOTEL_MANGMENT_checkin:
                 self.Message3.configure(highlightcolor="black")
                 self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],StainlessSteel1[part_2],part_5,part_6,part_7))
                 self.Message3.configure(width=1000)
+                if part_2 == StainlessSteel_1[0]:
+                    win = Tk()
+                    win.geometry("550x300+300+150")
+                    win.resizable(width=True, height=True)
+                    img = ImageTk.PhotoImage(Image.open("home/jabez-sanjay/Desktop/part-code/download.png"))
+                    panel = Label(win, image = img)
+                    panel.pack(side = "bottom", fill = "both", expand = "yes")
+                    win.mainloop()
+
+                    
+
+                
+
+                    
+
             elif part_1 == partGroup[2]:
                 self.Message3 = Message(self.Frame2)
                 self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
@@ -635,7 +653,8 @@ class HOTEL_MANGMENT_checkin:
                 self.Message3.configure(highlightbackground="#ffffff")
                 self.Message3.configure(highlightcolor="black")
                 self.Message3.configure(text="{}{}{}{}{}{}{}".format(partGroup_dict[part_1],Aluminium1[part_2],Aluminium2[part_3],Aluminium3[part_4],part_5,part_6,part_7))
-                self.Message3.configure(width=1000)   
+                self.Message3.configure(width=1000)  
+                 
             elif part_1 == partGroup[4]:
                 self.Message3 = Message(self.Frame2)
                 self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
