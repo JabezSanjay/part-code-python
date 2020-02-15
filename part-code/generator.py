@@ -63,90 +63,95 @@ partGroup = ["Mild Steel",
 "Pipes",
 "DoorMaterials",
 "PVC Items",
-"FRP Moulded Items",
-"Chemical Acids",
+"FRPMouldedItems",
+"ChemicalsAcids",
 "Insulation",
-"Lubricant Adhesives"
+"LubricantsAdhesives"
 
 ]
 
-partGroup_dict = {"Mild Steel" : "MS", "Stainless Steel" : "SS" , "Galvanized Iron" : "GI", "Aluminium" : "AL", "Plywood" : "PW", "Timber" : "TI", "Cloth Items" : "CL", "Paints" : "PA", "Cushions" : "CU", "Glass" : "GL", "Auto Electricals" : "AE", "Rubber Goods" : "RG", "Laminated sheets" : "LS", "Pipes" : "PI", "Fasteners" : "FA", "Door Materials" : "DM", "PVC Items" : "PV", "FRP Moulded items" : "FR", "Chemicals & Acids" : "CH", "Insulation" : "IN", "Lubricants & Adhesives" : "LS"}
+
+#Dictionary
+partGroup_dict = {"Mild Steel" : "MS", "Stainless Steel" : "SS" , "Galvanized Iron" : "GI", "Aluminium" : "AL", "Plywood" : "PW", "Timber" : "TI", "Cloth Items" : "CL", "Paints" : "PA", "Cushions" : "CU", "Glass" : "GL", "Auto Electricals" : "AE", "Rubber Goods" : "RG", "LaminatedSheets" : "LS", "Pipes" : "PI", "Fasteners" : "FA", "DoorMaterials" : "DM", "PVC Items" : "PV", "FRPMouldedItems" : "FR", "ChemicalsAcids" : "CH", "Insulation" : "IN", "LubricantsAdhesives" : "LS"}
 
 
 
-MildSteel_1 = {"Angle"   : "1", "Channel" : "2", "Flat" : "3", "Sheet" : "4", "Plate" : "5", "Rod" : "6", "Joist" : "7", "Hat section" : "8", "Channel section" : "9"}
-MildSteel_2 = {"Hot Rolled (H)" : "1", "Cold Rolled (C)" : "2", "Plain" : "3", "Round" : "4", "Square" : "5", "Chequered" : "6"}
-MildSteel_3 = {"Polished" : "1", "Non-polish" : "2"}
+MildSteel1 = {"Angle"   : "1", "Channel" : "2", "Flat" : "3", "Sheet" : "4", "Plate" : "5", "Rod" : "6", "Joist" : "7", "Hat section" : "8", "Channel section" : "9"}
+MildSteel2 = {"Hot Rolled" : "1", "Cold Rolled" : "2", "Plain" : "3", "Round" : "4", "Square" : "5", "Chequered" : "6"}
+MildSteel3 = {"Polished" : "1", "Non-polish" : "2"}
 
-StainlessSteel_1 = {"Sheet" : "1", "Coil" : "2"}
+StainlessSteel1 = {"Sheet" : "1", "Coil" : "2"}
 
-GalvanizedIron_1 = {"Sheet" : "1", "Wire" : "2", "Pipe"  : "3" , "Fittings" : "4"}  	   
-GalvanizedIron_2 = {"Plain" : "1", "Corrugated" : "2", "PVC Coated" : "3", "Reducer" : "4", "Elbow" : "5", "Tee" : "6", "Cross" : "7", "Hex Nipple" : "8", "Dummy Plug" : "9", "Union" : "10", "Coupling" : "11", "Clamp" : "12", "Pipe" : "13"}  	
+GalvanizedIron1 = {"Sheet" : "1", "Wire" : "2", "Pipe"  : "3" , "Fittings" : "4"}  	   
+GalvanizedIron2 = {"Plain" : "1", "Corrugated" : "2", "PVC Coated" : "3", "Reducer" : "4", "Elbow" : "5", "Tee" : "6", "Cross" : "7", "Hex Nipple" : "8", "Dummy Plug" : "9", "Union" : "10", "Coupling" : "11", "Clamp" : "12", "Pipe" : "13"}  	
 
-Aluminium_1 = {"Extrusions" : "1", "Sheet" : "2", "Plate": "3", "Coil" : "4"}
-Aluminium_2 = {"Plain" : "1", "Chequered" : "2"}
-Aluminium_3 = {"Polished" : "1", "Non-Polish PVC Coated" : "2"}
+Aluminium1 = {"Extrusions" : "1", "Sheet" : "2", "Plate": "3", "Coil" : "4"}
+Aluminium2 = {"Plain" : "1", "Chequered" : "2"}
+Aluminium3 = {"Polished" : "1", "Non-Polish" : "2"}
 
-Plywood_1 = {"Plain" : "1", "Chequered" : "2"}
-Plywood_2 = {"B. W. R." : "1", "W. W. R." : "2", "O. S. T." : "3", "Commercial Marine" : "4"}
+Plywood1 = {"Plain" : "1", "Chequered" : "2"}
+Plywood2 = {"B. W. R." : "1", "W. W. R." : "2", "O. S. T." : "3", "Commercial Marine" : "4"}
 
-Timber_1 = {"Ayini" : "1", "Karangi" : "2", "Silver Oak" : "3", "Rubber": "4"}
-Timber_2 = {"Reaper" : "1", "Curves" : "2", "Planks" : "3"}
+Timber1 = {"Ayini" : "1", "Karangi" : "2", "Silver Oak" : "3", "Rubber": "4"}
+Timber2 = {"Reaper" : "1", "Curves" : "2", "Planks" : "3"}
 
-ClothItems_1 = {"Leather Cloth" : "1", "Vinyl Mats" : "2", "Carpets" : "3", "Other Fabricitems" : "4"}
-ClothItems_2 =  {"Manufacturer" : "1"}
-ClothItems_3 = {"Shade" : "1", "Colour" : "2"}
+ClothItems1 = {"Leather Cloth" : "1", "Vinyl Mats" : "2", "Carpets" : "3", "Other Fabricitems" : "4"}
+ClothItems2 =  {"Manufacturer" : "1"}
+ClothItems3 = {"Shade" : "1", "Colour" : "2"}
 
-Paints_1 = {"Manufacturer" : "1"}
-Paints_2 = {"Primers" : "1", "Base Paints" : "2", "Thinner" : "3", "Enamel" : "4", "Lacquer" : "5", "Poly Urethane" : "6", "Chlorinated Rubber" : "7", "Filler materials" : "8", "Other Addictive" : "9"}
-Paints_3 = {"Colour" : "1"}
+Paints1 = {"Manufacturer" : "1"}
+Paints2 = {"Primers" : "1", "Base Paints" : "2", "Thinner" : "3", "Enamel" : "4", "Lacquer" : "5", "Poly Urethane" : "6", "Chlorinated Rubber" : "7", "Filler materials" : "8", "Other Addictive" : "9"}
+Paints3 = {"Colour" : "1"}
 
-Cushions_1 = {"Rubber" : "1", "Foam" : "2", "Coir" : "3"}
-Cushions_2 = {"Flat" : "1", "Taper" : "2", "Strip" : "3"}
+Cushions1 = {"Rubber" : "1", "Foam" : "2", "Coir" : "3"}
+Cushions2 = {"Flat" : "1", "Taper" : "2", "Strip" : "3"}
 
-Glass_1 = {"Toughened" : "1", "Laminated" : "2"}
-Glass_2 = {"Flat" : "1", "Curved" : "2"}
-Glass_3 ={"Clear" : "1", "Smoke" : "2"}
+Glass1 = {"Toughened" : "1", "Laminated" : "2"}
+Glass2 = {"Flat" : "1", "Curved" : "2"}
+Glass3 ={"Clear" : "1", "Smoke" : "2"}
 
-AutoElectricals_1 = {"Wires" : "1", "Cables" : "2", "Chokes" : "3", "Stater" : "4", "Fuse Units" : "5", "Bulbs/Lamps" : "6"}
-AutoElectricals_2 = {"Manufacturer" : "1"}
+AutoElectricals1 = {"Wires" : "1", "Cables" : "2", "Chokes" : "3", "Stater" : "4", "Fuse Units" : "5", "Bulbs/Lamps" : "6"}
+AutoElectricals2 = {"Manufacturer" : "1"}
 
-RubberGoods_1 = {"Extrusions" : "1", "Sheets" : "2", "Tubes": "3"}
-RubberGoods_2 = {"Sire" : "1", "EPDM" : "2"}
-
-
-LaminatedSheets_1 = {"Shade" : "1"}
-LaminatedSheets_2 = {"Types of finish" : "1"}
+RubberGoods1 = {"Extrusions" : "1", "Sheets" : "2", "Tubes": "3"}
+RubberGoods2 = {"Sire" : "1", "EPDM" : "2"}
 
 
-Pipes_1 = {"M. S." : "1", "ERW" : "2", "Stainless steel" : "3"}
-Pipes_2 = {"Square Round" : "1"}
+LaminatedSheets1 = {"Shade" : "1"}
+LaminatedSheets2 = {"Types of finish" : "1"}
 
 
-DoorMaterials_1 = {"Locks" : "1", "Handles" : "2", "Hinges" : "3", "Tower Bolts" : "4", "padlock Items" : "5", "Door Assys" : "6", "Door closer" : "7", "Door padding Item" : "8", "Window material" : "9"}
-
-PVCItems_1 = {"Sleeves" : "1", "Inserts" : "2", "Bushes" : "3", "Clips" : "4", "Grommets" : "5", "Packing Items" : "6", "Pipe Fittings" : "7"}
-PVCItems_2 = { "Colour" : "1", "Flat base" : "2", "Taper base" : "3",  "Reducer" : "4", "Elbow" : "5", "Tee" : "6", "Cross" : "7", "Hex Nipple" : "8", "Dummy Plug" : "9", "Union" : "10",  "Coupling" : "11", "Clamp" : "12", "Pipe" : "13"}
+Pipes1 = {"M. S." : "1", "ERW" : "2", "Stainless steel" : "3"}
+Pipes2 = {"Square Round" : "1"}
 
 
-FRPMouldedItems_1 = {"Resin" : "1", "Mat" : "2", "Accelerator" : "3", "Catalyst" : "4"}
+DoorMaterials1 = {"Locks" : "1", "Handles" : "2", "Hinges" : "3", "Tower Bolts" : "4", "padlock Items" : "5", "Door Assys" : "6", "Door closer" : "7", "Door padding Item" : "8", "Window material" : "9"}
+
+PVCItems1 = {"Sleeves" : "1", "Inserts" : "2", "Bushes" : "3", "Clips" : "4", "Grommets" : "5", "Packing Items" : "6", "Pipe Fittings" : "7"}
+PVCItems2 = { "Colour" : "1", "Flat base" : "2", "Taper base" : "3",  "Reducer" : "4", "Elbow" : "5", "Tee" : "6", "Cross" : "7", "Hex Nipple" : "8", "Dummy Plug" : "9", "Union" : "10",  "Coupling" : "11", "Clamp" : "12", "Pipe" : "13"}
 
 
-ChemicalsAcids_1 = {"Chemicals" : "1", "Acids" : "2"}
+FRPMouldedItems1 = {"Resin" : "1", "Mat" : "2", "Accelerator" : "3", "Catalyst" : "4"}
 
 
-Insulation_1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocole" : "3"}
+ChemicalsAcids1 = {"Chemicals" : "1", "Acids" : "2"}
 
-LubricantsAdhesives_1 = {"Pastes" : "1","Sealants" : "2", "Oils" : "3", "Grease" : "4"}
+
+Insulation1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocole" : "3"}
+
+LubricantsAdhesives1 = {"Pastes" : "1","Sealants" : "2", "Oils" : "3", "Grease" : "4"}
+
+
+#Lists
 mildSteel_1 = ["Angle", "Channel", "Flat", "Sheet", "Plate", "Rod", "Joist", "Hat section", "Channel section"]
 mildSteel_2 = ["Hot Rolled", "Cold Rolled", "Plain", "Round", "Square", "Chequered"]
 mildSteel_3 = ["Polished", "Non- polish"]
-stainlessSteel = ["Sheet", "Coil"]
+StainlessSteel_1 = ["Sheet", "Coil"]
 galvanizedIron_1 = ["Sheet", "Wire", "Pipe", "Fittings"]
 galvanizedIron_2 = ["Plain", "Corrugated", "PVC Coated", "Reducer", "Elbow", "Tee", "Cross", "Hex Nipple", "Dummy Plug", "Union", "Coupling", "Clamp", "Pipe"]
 Aluminium_1 = ["Extrusions", "Sheet", "Plate", "Coil"]
 Aluminium_2 = ["Plain", "Chequered"]
-Aluminium_3 =["Polished", "Non-Polish", "PVC", "Coated"]
+Aluminium_3 =["Polished", "Non-Polish"]
 Plywood_1 = ["Plain", "Chequered"]
 Plywood_2 = ["B. W. R.", "W. W. R.", "O. S. T", "Commercial Marine"]
 Timber_1 = ["Ayini", "Karangi", "Silver Oak", "Rubber"]
@@ -165,7 +170,9 @@ Glass_3 = ["Clear", "Smoke"]
 AutoElectricals_1 = ["Wires", "Cables", "Chokes", "Stater", "Fuse Units", "Bulbs/Lamps"]
 AutoElectricals_2 = ["Manufacturer"]
 AutoElectricals_3 = ["Clear"]
-RubberGoods = ["Extrusions", "Sheets", "Tubes"]
+RubberGoods_1 = ["Extrusions", "Sheets", "Tubes"]
+RubberGoods_2 = ["Sire", "EPDM"]
+
 LaminatedSheets_1 =["Shade"]
 LaminatedSheets_2 = ["Types of finish"]
 Pipes_1 = ["M. S.", "ERW", "Stainless steel"]
@@ -173,10 +180,10 @@ Pipes_2 = ["Square Round"]
 DoorMaterials = ["Locks", "Handles", "Hinges", "Tower Bolts", "Padlock Items", "Door Assys", "Door closer", "Door padding Item", "Window material"]
 PVCItems_1 = ["Sleeves", "Inserts", "Bushes", "Clips", "Grommets", "Packing Items", "Pipe Fittings"]
 PVCItems_2 = ["Colour", "Flat base", "Taper base", "Reducer", "Elbow", "Tee", "Cross", "Hex Nipple", "Dummy Plug", "Union", "Coupling", "Clamp", "Pipe"]
-FRPMouldedItems = ["Resin", "Mat", "Accelerator", "Catalyst"]
-ChemicalsAcids = ["Chemicals", "Acids"]
-Insulation = ["Puf", "Glass Wool", "Thermocol"]
-LubricantsAdhesives = ["Pastes", "Sealants", "Oils", "Grease"]
+FRPMouldedItems_1 = ["Resin", "Mat", "Accelerator", "Catalyst"]
+ChemicalsAcids_1 = ["Chemicals", "Acids"]
+Insulation_1 = ["Puf", "Glass Wool", "Thermocol"]
+LubricantsAdhesives_1 = ["Pastes", "Sealants", "Oils", "Grease"]
 
 
 
@@ -248,7 +255,7 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupTwo)
                 
             
@@ -259,7 +266,7 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
@@ -267,7 +274,7 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+               
                 self.Entry1.configure(textvariable=groupFour)
             elif part == partGroup[3]:
                 
@@ -276,7 +283,7 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
@@ -284,7 +291,7 @@ class HOTEL_MANGMENT_checkin:
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3.configure(bg="white")
+                
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
@@ -292,275 +299,283 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[4]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*Plywood_2)
+                self.Entry2 = Combobox(self.Frame2,values=Plywood_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*Plywood_1)
+                self.Entry1 = Combobox(self.Frame2,values=Plywood_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[5]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*Timber_2)
+                self.Entry2 = Combobox(self.Frame2,values=Timber_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*Timber_1)
+                self.Entry1 = Combobox(self.Frame2,values=Timber_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[6]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*ClothItems_2)
+                self.Entry2 = Combobox(self.Frame2,values=ClothItems_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = Combobox(self.Frame2,groupThree,*ClothItems_3)
+                self.Entry3 = Combobox(self.Frame2,values=ClothItems_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3configure(bg="white")
+                
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*ClothItems_1)
+                self.Entry1 = Combobox(self.Frame2,values=ClothItems_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[7]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*Paints_2)
+                self.Entry2 = Combobox(self.Frame2,values=Paints_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = Combobox(self.Frame2,groupThree,*Paints_3)
+                self.Entry3 = Combobox(self.Frame2,values=Paints_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3configure(bg="white")
+                
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*Paints_1)
+                self.Entry1 = Combobox(self.Frame2,values=Paints_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[8]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*Cushions_2)
+                self.Entry2 = Combobox(self.Frame2,values=Cushions_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*Cushions_1)
+                self.Entry1 = Combobox(self.Frame2,values=Cushions_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[9]:
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*Glass_2)
+                self.Entry2 = Combobox(self.Frame2,values=Glass_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+               
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = Combobox(self.Frame2,groupThree,*Glass_3)
+                self.Entry3 = Combobox(self.Frame2,values=Glass_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3configure(bg="white")
+               
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*Glass_1)
+                self.Entry1 = Combobox(self.Frame2,values=Glass_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             elif part == partGroup[10]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*AutoElectricals_2)
+                self.Entry2 = Combobox(self.Frame2,values=AutoElectricals_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
-                self.Entry3 = Combobox(self.Frame2,groupThree,*AutoElectricals_3)
+                self.Entry3 = Combobox(self.Frame2,values=AutoElectricals_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                self.Entry3configure(bg="white")
+                
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*AutoElectricals_1)
+                self.Entry1 = Combobox(self.Frame2,values=AutoElectricals_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+               
                 self.Entry1.configure(textvariable=groupFour)
 
             elif part == partGroup[11]:
                 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*RubberGoods)
+                self.Entry1 = Combobox(self.Frame2,values=RubberGoods_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+               
                 self.Entry1.configure(textvariable=groupFour)
-            
-            elif part == partGroup[12]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*LaminatedSheets_2)
+                self.Entry2 = Combobox(self.Frame2,values=RubberGoods_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+               
+                self.Entry2.configure(textvariable=groupTwo)
+
+            elif part == partGroup[12]:
+                
+                groupTwo = StringVar()
+                self.Entry2 = Combobox(self.Frame2,values=LaminatedSheets_2)
+                self.mobile=StringVar()
+                self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
+                self.Entry2.configure(background="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*LaminatedSheets_1)
+                self.Entry1 = Combobox(self.Frame2,values=LaminatedSheets_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+               
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[13]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*Pipes_2)
+                self.Entry2 = Combobox(self.Frame2,values=Pipes_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+               
                 self.Entry2.configure(textvariable=groupTwo)
 
-                self.Entry1 = Combobox(self.Frame2,groupFour,*Pipes_1)
+                self.Entry1 = Combobox(self.Frame2,values=Pipes_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+             
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[14]:
   
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*DoorMaterials)
+                self.Entry1 = Combobox(self.Frame2,values=DoorMaterials)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+               
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[15]:
                 
                 groupTwo = StringVar()
-                self.Entry2 = Combobox(self.Frame2,groupTwo,*PVCItems_2)
+                self.Entry2 = Combobox(self.Frame2,values=PVCItems_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                self.Entry2.configure(bg="white")
+                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*PVCItems_1)
+                self.Entry1 = Combobox(self.Frame2,values=PVCItems_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[16]:
                 
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*FRPMouldedItems)
+                self.Entry1 = Combobox(self.Frame2,values=FRPMouldedItems_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             elif part == partGroup[17]:
  
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*ChemicalsAcids)
+                self.Entry1 = Combobox(self.Frame2,values=ChemicalsAcids_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[18]:
  
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*Insulation)
+                self.Entry1 = Combobox(self.Frame2,values=Insulation_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[19]:
  
                 groupFour = StringVar()
-                self.Entry1 = Combobox(self.Frame2,groupFour,*LubricantsAdhesives)
+                self.Entry1 = Combobox(self.Frame2,values=LubricantsAdhesives_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                self.Entry1.configure(bg="white")
+               
                 self.Entry1.configure(textvariable=groupFour)
 
         
@@ -575,18 +590,233 @@ class HOTEL_MANGMENT_checkin:
             part_2 = self.Entry1.get()
             part_3 = self.Entry2.get()
             part_4 = self.Entry3.get()
+            part_5 = self.Entry5.get()
+            part_6 = self.Entry6.get()
+            part_7 = self.Entry7.get()
             
-            labelTest.configure(text="The Part Code is {} - {}".format(partGroup_dict[part_1],))
+            
+            if part_1 == partGroup[0]:
                 
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}{}".format(partGroup_dict[part_1],MildSteel1[part_2],MildSteel2[part_3],MildSteel3[part_4],part_5,part_6,part_7))
+                self.Message3.configure(widtsh=1000)
+            elif part_1 == partGroup[1]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],StainlessSteel1[part_2],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+            elif part_1 == partGroup[2]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],GalvanizedIron1[part_2],GalvanizedIron2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+            elif part_1 == partGroup[3]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}{}".format(partGroup_dict[part_1],Aluminium1[part_2],Aluminium2[part_3],Aluminium3[part_4],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)   
+            elif part_1 == partGroup[4]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],Plywood1[part_2],Plywood2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+
+            elif part_1 == partGroup[5]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],Timber1[part_2],Timber2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000) 
+            
+            elif part_1 == partGroup[6]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}{}".format(partGroup_dict[part_1],ClothItems1[part_2],ClothItems2[part_3],ClothItems3[part_4],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+            
+            elif part_1 == partGroup[7]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}{}".format(partGroup_dict[part_1],Paints1[part_2],Paints2[part_3],Paints3[part_4],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+
+            elif part_1 == partGroup[8]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],Cushions1[part_2],Cushions2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+
+            elif part_1 == partGroup[9]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}{}".format(partGroup_dict[part_1],Glass1[part_2],Glass2[part_3],Glass3[part_4],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)  
+
+            elif part_1 == partGroup[10]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],AutoElectricals1[part_2],AutoElectricals2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)          
+            
+            elif part_1 == partGroup[11]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],RubberGoods1[part_2],RubberGoods2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+
+            elif part_1 == partGroup[12]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],LaminatedSheets1[part_2],LaminatedSheets2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+
+            elif part_1 == partGroup[13]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],Pipes1[part_2],Pipes2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000) 
+
+            elif part_1 == partGroup[14]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],DoorMaterials1[part_2],part_5,part_6,part_7))
+                self.Message3.configure(width=1000) 
+
+            elif part_1 == partGroup[15]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}{}".format(partGroup_dict[part_1],PVCItems1[part_2],PVCItems2[part_3],part_5,part_6,part_7))
+                self.Message3.configure(width=1000) 
+
+            elif part_1 == partGroup[16]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],FRPMouldedItems1[part_2],part_5,part_6,part_7))
+                self.Message3.configure(width=1000) 
+
+            elif part_1 == partGroup[17]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],ChemicalsAcids1[part_2],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)                
                 
-        
-          
-        '''def store_variable():
-            groupFour = StringVar()'''
+            elif part_1 == partGroup[18]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],Insulation1[part_2],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)
+
+            elif part_1 == partGroup[19]:
+                self.Message3 = Message(self.Frame2)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.configure(background="dark slate gray")
+                self.Message3.configure(font=font11)
+                self.Message3.configure(foreground="gray10")
+                self.Message3.configure(highlightbackground="#ffffff")
+                self.Message3.configure(highlightcolor="black")
+                self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],LubricantsAdhesives1[part_2],part_5,part_6,part_7))
+                self.Message3.configure(width=1000)    
+
+            
+         
+
             
             
-            
-       
         def bill(self):
 
             
@@ -724,11 +954,10 @@ class HOTEL_MANGMENT_checkin:
       
         
 
-        labelTest = Label(text="", font=('Helvetica', 12), fg='red')
-        labelTest.pack(side="top")
+        
 
         
-        
+        empty=[]
         groupOne = StringVar()
         self.Entry0 = Combobox(self.Frame2,values=partGroup)
         self.name=StringVar()
@@ -738,7 +967,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry0.configure(textvariable=groupOne)
 
         groupTwo = StringVar()
-        self.Entry2 = Combobox(self.Frame2,values=mildSteel_2)
+        self.Entry2 = Combobox(self.Frame2,values=empty)
         self.mobile=StringVar()
         self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
         self.Entry2.configure(background="white")
@@ -746,7 +975,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry2.configure(textvariable=groupTwo)
 
         groupThree = StringVar()
-        self.Entry3 = Combobox(self.Frame2,values=mildSteel_3)
+        self.Entry3 = Combobox(self.Frame2,values=empty)
         self.name=StringVar()
         self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
         self.Entry3.configure(background="white")
@@ -754,7 +983,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry3.configure(textvariable=groupThree)
 
         groupFour = StringVar()
-        self.Entry1 = Combobox(self.Frame2,values=mildSteel_1)
+        self.Entry1 = Combobox(self.Frame2,values=empty)
         self.mobile=StringVar()
         self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
         self.Entry1.configure(background="white")
@@ -836,35 +1065,35 @@ class HOTEL_MANGMENT_checkin:
 
         
         groupTwo = StringVar()
-        self.Entry4 = Entry(self.Frame2)
+        self.Entry5 = Entry(self.Frame2)
         self.mobile=StringVar()
-        self.Entry4.place(relx=0.47, rely=0.60,height=34, relwidth=0.10)
-        self.Entry4.configure(background="white smoke")
+        self.Entry5.place(relx=0.47, rely=0.60,height=34, relwidth=0.10)
+        self.Entry5.configure(background="white smoke")
                
         
-        self.Entry4.configure(textvariable=groupTwo)
+        self.Entry5.configure(textvariable=groupTwo)
  
 
         
 
         groupTwo = StringVar()
-        self.Entry4 = Entry(self.Frame2)
+        self.Entry6 = Entry(self.Frame2)
         self.mobile=StringVar()
-        self.Entry4.place(relx=0.57, rely=0.60,height=34, relwidth=0.10)
-        self.Entry4.configure(background="white smoke")
+        self.Entry6.place(relx=0.57, rely=0.60,height=34, relwidth=0.10)
+        self.Entry6.configure(background="white smoke")
         
-        self.Entry4.configure(textvariable=groupTwo)
+        self.Entry6.configure(textvariable=groupTwo)
 
 
         
 
         groupTwo = StringVar()
-        self.Entry4 = Entry(self.Frame2)
+        self.Entry7 = Entry(self.Frame2)
         self.mobile=StringVar()
-        self.Entry4.place(relx=0.67, rely=0.60,height=34, relwidth=0.10)
-        self.Entry4.configure(background="white smoke")
+        self.Entry7.place(relx=0.67, rely=0.60,height=34, relwidth=0.10)
+        self.Entry7.configure(background="white smoke")
         
-        self.Entry4.configure(textvariable=groupTwo)
+        self.Entry7.configure(textvariable=groupTwo)
 
         
         
