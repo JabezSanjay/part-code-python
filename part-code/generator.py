@@ -138,7 +138,7 @@ FRPMouldedItems1 = {"Resin" : "1", "Mat" : "2", "Accelerator" : "3", "Catalyst" 
 ChemicalsAcids1 = {"Chemicals" : "1", "Acids" : "2"}
 
 
-Insulation1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocole" : "3"}
+Insulation1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocol" : "3"}
 
 LubricantsAdhesives1 = {"Pastes" : "1","Sealants" : "2", "Oils" : "3", "Grease" : "4"}
 
