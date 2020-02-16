@@ -3,7 +3,8 @@ import pickle
 import sys
 import os
 from subprocess import call
-from PIL import Image, ImageTk
+import PIL.Image
+import PIL.ImageTk
 
 import sys
 
@@ -138,7 +139,7 @@ FRPMouldedItems1 = {"Resin" : "1", "Mat" : "2", "Accelerator" : "3", "Catalyst" 
 ChemicalsAcids1 = {"Chemicals" : "1", "Acids" : "2"}
 
 
-Insulation1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocol" : "3"}
+Insulation1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocole" : "3"}
 
 LubricantsAdhesives1 = {"Pastes" : "1","Sealants" : "2", "Oils" : "3", "Grease" : "4"}
 
@@ -191,8 +192,10 @@ LubricantsAdhesives_1 = ["Pastes", "Sealants", "Oils", "Grease"]
 
 def restart_program():
     """Restarts the current program.
+
     Note: this function does not return. Any cleanup action (like
-    saving data) must be done before calling this function."""
+    saving data) must be done before calling this function.
+    """
     python = sys.executable
     os.execl(python, python, * sys.argv)
 
@@ -212,6 +215,19 @@ class HOTEL_MANGMENT_checkin:
     
 
     def __init__(self):
+
+        def image_show():
+            part_2 = self.Entry1.get()
+            print(part_2)
+            if part_2 == StainlessSteel_1[0]:
+                fp = open("images.png","rb")
+                img = PIL.Image.open(fp)
+                img.show()
+                    
+                    
+                    
+                    
+                    
 
        
         
@@ -589,6 +605,7 @@ class HOTEL_MANGMENT_checkin:
         def submit_clicked():
             
             part_1 = groupOne.get()
+            global part_2
             part_2 = self.Entry1.get()
             part_3 = self.Entry2.get()
             part_4 = self.Entry3.get()
@@ -611,7 +628,7 @@ class HOTEL_MANGMENT_checkin:
                 self.Message3.configure(widtsh=1000)
             elif part_1 == partGroup[1]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -619,20 +636,6 @@ class HOTEL_MANGMENT_checkin:
                 self.Message3.configure(highlightcolor="black")
                 self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],StainlessSteel1[part_2],part_5,part_6,part_7))
                 self.Message3.configure(width=1000)
-                if part_2 == StainlessSteel_1[0]:
-                    win = Tk()
-                    win.geometry("550x300+300+150")
-                    win.resizable(width=True, height=True)
-                    img = ImageTk.PhotoImage(Image.open("home/jabez-sanjay/Desktop/part-code/download.png"))
-                    panel = Label(win, image = img)
-                    panel.pack(side = "bottom", fill = "both", expand = "yes")
-                    win.mainloop()
-
-                    
-
-                
-
-                    
 
             elif part_1 == partGroup[2]:
                 self.Message3 = Message(self.Frame2)
@@ -1252,6 +1255,22 @@ class HOTEL_MANGMENT_checkin:
         self.Button4.bind("<Leave>", leave)
         self.Button4.configure(text='''SUBMIT''')
         self.Button4.configure(command=submit_clicked)
+
+        self.Button4 = Button(self.Frame2)
+        self.Button4.place(relx=0.60, rely=0.72, height=83, width=156)
+        self.Button4.configure(activebackground="#ffffff")
+        self.Button4.configure(activeforeground="#000000")
+        self.Button4.configure(background="white smoke")
+        self.Button4.configure(disabledforeground="#bfbfbf")
+        self.Button4.configure(font=font16)
+        self.Button4.configure(foreground="#000000")
+        self.Button4.configure(highlightbackground="#ffffff")
+        self.Button4.configure(highlightcolor="black")
+        self.Button4.configure(pady="0")
+        self.Button4.bind("<Enter>", enter)
+        self.Button4.bind("<Leave>", leave)
+        self.Button4.configure(text='''GET INFO''')
+        self.Button4.configure(command=image_show)
 
         
 
