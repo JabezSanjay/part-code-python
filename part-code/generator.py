@@ -198,7 +198,7 @@ class HOTEL_MANGMENT_checkin:
             part_2 = self.Entry1.get()
             print(part_2)
             if part_2 == StainlessSteel_1[0]:
-                fp = open("images.png","rb")
+                fp = open("sheet.jpg","rb")
                 img = PIL.Image.open(fp)
                 img.show()
                            
