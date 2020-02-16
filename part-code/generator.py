@@ -44,10 +44,6 @@ def file_save():
     restart_program()
 
 
-
-
-new = ["hi","hello"]
-
 u = list()
 partGroup = ["Mild Steel",
 "Stainless Steel",
@@ -69,14 +65,11 @@ partGroup = ["Mild Steel",
 "ChemicalsAcids",
 "Insulation",
 "LubricantsAdhesives"
-
 ]
 
 
 #Dictionary
 partGroup_dict = {"Mild Steel" : "MS", "Stainless Steel" : "SS" , "Galvanized Iron" : "GI", "Aluminium" : "AL", "Plywood" : "PW", "Timber" : "TI", "Cloth Items" : "CL", "Paints" : "PA", "Cushions" : "CU", "Glass" : "GL", "Auto Electricals" : "AE", "Rubber Goods" : "RG", "LaminatedSheets" : "LS", "Pipes" : "PI", "Fasteners" : "FA", "DoorMaterials" : "DM", "PVC Items" : "PV", "FRPMouldedItems" : "FR", "ChemicalsAcids" : "CH", "Insulation" : "IN", "LubricantsAdhesives" : "LS"}
-
-
 
 MildSteel1 = {"Angle"   : "1", "Channel" : "2", "Flat" : "3", "Sheet" : "4", "Plate" : "5", "Rod" : "6", "Joist" : "7", "Hat section" : "8", "Channel section" : "9"}
 MildSteel2 = {"Hot Rolled" : "1", "Cold Rolled" : "2", "Plain" : "3", "Round" : "4", "Square" : "5", "Chequered" : "6"}
@@ -118,31 +111,24 @@ AutoElectricals2 = {"Manufacturer" : "1"}
 RubberGoods1 = {"Extrusions" : "1", "Sheets" : "2", "Tubes": "3"}
 RubberGoods2 = {"Sire" : "1", "EPDM" : "2"}
 
-
 LaminatedSheets1 = {"Shade" : "1"}
 LaminatedSheets2 = {"Types of finish" : "1"}
 
-
 Pipes1 = {"M. S." : "1", "ERW" : "2", "Stainless steel" : "3"}
 Pipes2 = {"Square Round" : "1"}
-
 
 DoorMaterials1 = {"Locks" : "1", "Handles" : "2", "Hinges" : "3", "Tower Bolts" : "4", "padlock Items" : "5", "Door Assys" : "6", "Door closer" : "7", "Door padding Item" : "8", "Window material" : "9"}
 
 PVCItems1 = {"Sleeves" : "1", "Inserts" : "2", "Bushes" : "3", "Clips" : "4", "Grommets" : "5", "Packing Items" : "6", "Pipe Fittings" : "7"}
 PVCItems2 = { "Colour" : "1", "Flat base" : "2", "Taper base" : "3",  "Reducer" : "4", "Elbow" : "5", "Tee" : "6", "Cross" : "7", "Hex Nipple" : "8", "Dummy Plug" : "9", "Union" : "10",  "Coupling" : "11", "Clamp" : "12", "Pipe" : "13"}
 
-
 FRPMouldedItems1 = {"Resin" : "1", "Mat" : "2", "Accelerator" : "3", "Catalyst" : "4"}
 
-
 ChemicalsAcids1 = {"Chemicals" : "1", "Acids" : "2"}
-
 
 Insulation1 = {"Puf" : "1", "Glass Wool" : "2", "Thermocole" : "3"}
 
 LubricantsAdhesives1 = {"Pastes" : "1","Sealants" : "2", "Oils" : "3", "Grease" : "4"}
-
 
 #Lists
 mildSteel_1 = ["Angle", "Channel", "Flat", "Sheet", "Plate", "Rod", "Joist", "Hat section", "Channel section"]
@@ -187,9 +173,6 @@ ChemicalsAcids_1 = ["Chemicals", "Acids"]
 Insulation_1 = ["Puf", "Glass Wool", "Thermocol"]
 LubricantsAdhesives_1 = ["Pastes", "Sealants", "Oils", "Grease"]
 
-
-
-
 def restart_program():
     """Restarts the current program.
 
@@ -199,7 +182,6 @@ def restart_program():
     python = sys.executable
     os.execl(python, python, * sys.argv)
 
-
 class save:
     def __init__(self,NAME_PRO,ADDRESS_PRO,MOBILE_NO_PRO,ROOM_NO_PRO,PRICE_PRO):
         self.name=NAME_PRO
@@ -208,12 +190,8 @@ class save:
         self.room_no=ROOM_NO_PRO
         self.price=PRICE_PRO
 
-
-
 class HOTEL_MANGMENT_checkin:
-    
-    
-
+       
     def __init__(self):
 
         def image_show():
@@ -223,14 +201,7 @@ class HOTEL_MANGMENT_checkin:
                 fp = open("images.png","rb")
                 img = PIL.Image.open(fp)
                 img.show()
-                    
-                    
-                    
-                    
-                    
-
-       
-        
+                           
         def dynamic_change():
             
             part = groupOne.get()
@@ -244,7 +215,6 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
                 self.Entry2.configure(background="white")
-                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
@@ -252,7 +222,6 @@ class HOTEL_MANGMENT_checkin:
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
                 self.Entry3.configure(background="white")
-                
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
@@ -260,64 +229,54 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                
                 self.Entry1.configure(textvariable=groupFour)
-
-                
-            
+           
             elif part == partGroup[1]:
 
                 groupTwo = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=StainlessSteel_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupTwo)
-                
-                
-            
+           
             elif part == partGroup[2]:
                 
                 groupTwo = StringVar()
                 self.Entry2 = Combobox(self.Frame2,values=galvanizedIron_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=galvanizedIron_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-               
+                self.Entry1.configure(background="white")               
                 self.Entry1.configure(textvariable=groupFour)
+
             elif part == partGroup[3]:
                 
                 groupTwo = StringVar()
                 self.Entry2 = Combobox(self.Frame2,values=Aluminium_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
                 self.Entry3 = Combobox(self.Frame2,values=Aluminium_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
-                self.Entry3.configure(background="white")
-                
+                self.Entry3.configure(background="white")               
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=Aluminium_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[4]:
@@ -326,16 +285,14 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=Plywood_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=Plywood_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[5]:
@@ -344,16 +301,14 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=Timber_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=Timber_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")               
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[6]:
@@ -362,24 +317,21 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=ClothItems_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")               
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
                 self.Entry3 = Combobox(self.Frame2,values=ClothItems_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
-                self.Entry3.configure(background="white")
-                
+                self.Entry3.configure(background="white")                
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=ClothItems_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[7]:
@@ -388,24 +340,21 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=Paints_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
                 self.Entry3 = Combobox(self.Frame2,values=Paints_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
-                self.Entry3.configure(background="white")
-                
+                self.Entry3.configure(background="white")               
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=Paints_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[8]:
@@ -414,16 +363,14 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=Cushions_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")               
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=Cushions_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[9]:
@@ -431,49 +378,44 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=Glass_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-               
+                self.Entry2.configure(background="white")               
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
                 self.Entry3 = Combobox(self.Frame2,values=Glass_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
-                self.Entry3.configure(background="white")
-               
+                self.Entry3.configure(background="white")              
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=Glass_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
+
             elif part == partGroup[10]:
                 
                 groupTwo = StringVar()
                 self.Entry2 = Combobox(self.Frame2,values=AutoElectricals_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupThree = StringVar()
                 self.Entry3 = Combobox(self.Frame2,values=AutoElectricals_3)
                 self.name=StringVar()
                 self.Entry3.place(relx=0.47, rely=0.44,height=34, relwidth=0.43)
-                self.Entry3.configure(background="white")
-                
+                self.Entry3.configure(background="white")               
                 self.Entry3.configure(textvariable=groupThree)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=AutoElectricals_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-               
+                self.Entry1.configure(background="white")              
                 self.Entry1.configure(textvariable=groupFour)
 
             elif part == partGroup[11]:
@@ -482,16 +424,14 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry1 = Combobox(self.Frame2,values=RubberGoods_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-               
+                self.Entry1.configure(background="white")               
                 self.Entry1.configure(textvariable=groupFour)
                 
                 groupTwo = StringVar()
                 self.Entry2 = Combobox(self.Frame2,values=RubberGoods_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-               
+                self.Entry2.configure(background="white")              
                 self.Entry2.configure(textvariable=groupTwo)
 
             elif part == partGroup[12]:
@@ -500,16 +440,14 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=LaminatedSheets_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")                
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=LaminatedSheets_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-               
+                self.Entry1.configure(background="white")              
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[13]:
@@ -518,15 +456,13 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=Pipes_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-               
+                self.Entry2.configure(background="white")               
                 self.Entry2.configure(textvariable=groupTwo)
 
                 self.Entry1 = Combobox(self.Frame2,values=Pipes_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-             
+                self.Entry1.configure(background="white")            
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[14]:
@@ -535,8 +471,7 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry1 = Combobox(self.Frame2,values=DoorMaterials)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-               
+                self.Entry1.configure(background="white")               
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[15]:
@@ -545,16 +480,14 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry2 = Combobox(self.Frame2,values=PVCItems_2)
                 self.mobile=StringVar()
                 self.Entry2.place(relx=0.47, rely=0.31,height=34, relwidth=0.43)
-                self.Entry2.configure(background="white")
-                
+                self.Entry2.configure(background="white")               
                 self.Entry2.configure(textvariable=groupTwo)
 
                 groupFour = StringVar()
                 self.Entry1 = Combobox(self.Frame2,values=PVCItems_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[16]:
@@ -563,9 +496,9 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry1 = Combobox(self.Frame2,values=FRPMouldedItems_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")               
                 self.Entry1.configure(textvariable=groupFour)
+
             elif part == partGroup[17]:
  
                 groupFour = StringVar()
@@ -573,7 +506,6 @@ class HOTEL_MANGMENT_checkin:
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
                 self.Entry1.configure(background="white")
-                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[18]:
@@ -582,8 +514,7 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry1 = Combobox(self.Frame2,values=Insulation_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-                
+                self.Entry1.configure(background="white")                
                 self.Entry1.configure(textvariable=groupFour)
             
             elif part == partGroup[19]:
@@ -592,16 +523,9 @@ class HOTEL_MANGMENT_checkin:
                 self.Entry1 = Combobox(self.Frame2,values=LubricantsAdhesives_1)
                 self.mobile=StringVar()
                 self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-                self.Entry1.configure(background="white")
-               
+                self.Entry1.configure(background="white")              
                 self.Entry1.configure(textvariable=groupFour)
-
-        
-
-        
-        
-        
-        
+      
         def submit_clicked():
             
             part_1 = groupOne.get()
@@ -612,20 +536,18 @@ class HOTEL_MANGMENT_checkin:
             part_5 = self.Entry5.get()
             part_6 = self.Entry6.get()
             part_7 = self.Entry7.get()
-        
-            
             
             if part_1 == partGroup[0]:
                 
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
                 self.Message3.configure(highlightbackground="#ffffff")
                 self.Message3.configure(highlightcolor="black")
                 self.Message3.configure(text="{}{}{}{}{}{}{}".format(partGroup_dict[part_1],MildSteel1[part_2],MildSteel2[part_3],MildSteel3[part_4],part_5,part_6,part_7))
-                self.Message3.configure(widtsh=1000)
+                self.Message3.configure(width=1000)
             elif part_1 == partGroup[1]:
                 self.Message3 = Message(self.Frame2)
                 self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
@@ -639,7 +561,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[2]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -649,7 +571,7 @@ class HOTEL_MANGMENT_checkin:
                 self.Message3.configure(width=1000)
             elif part_1 == partGroup[3]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -660,7 +582,7 @@ class HOTEL_MANGMENT_checkin:
                  
             elif part_1 == partGroup[4]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -671,7 +593,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[5]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -682,7 +604,7 @@ class HOTEL_MANGMENT_checkin:
             
             elif part_1 == partGroup[6]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -693,7 +615,7 @@ class HOTEL_MANGMENT_checkin:
             
             elif part_1 == partGroup[7]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -704,7 +626,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[8]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -715,7 +637,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[9]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -726,7 +648,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[10]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -737,7 +659,7 @@ class HOTEL_MANGMENT_checkin:
             
             elif part_1 == partGroup[11]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -748,7 +670,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[12]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -759,7 +681,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[13]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -770,7 +692,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[14]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -781,7 +703,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[15]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -792,7 +714,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[16]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -803,7 +725,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[17]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -814,7 +736,7 @@ class HOTEL_MANGMENT_checkin:
                 
             elif part_1 == partGroup[18]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -825,7 +747,7 @@ class HOTEL_MANGMENT_checkin:
 
             elif part_1 == partGroup[19]:
                 self.Message3 = Message(self.Frame2)
-                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.60)
+                self.Message3.place(relx=0.15, rely=0.75, relheight=0.20, relwidth=0.40)
                 self.Message3.configure(background="dark slate gray")
                 self.Message3.configure(font=font11)
                 self.Message3.configure(foreground="gray10")
@@ -833,12 +755,7 @@ class HOTEL_MANGMENT_checkin:
                 self.Message3.configure(highlightcolor="black")
                 self.Message3.configure(text="{}{}{}{}{}".format(partGroup_dict[part_1],LubricantsAdhesives1[part_2],part_5,part_6,part_7))
                 self.Message3.configure(width=1000)    
-
-            
-         
-
-            
-            
+           
         def bill(self):
 
             
@@ -865,16 +782,6 @@ class HOTEL_MANGMENT_checkin:
             f2.close()
 
             file_save()
-
-        
-            
-
-
-            
-
-
-
-
 
         root = Tk()
 
@@ -914,15 +821,7 @@ class HOTEL_MANGMENT_checkin:
 
         def leave(event):
             self.Button4.configure(foreground="#000000")    
-
-        
-
-        
-        
-        
-        
-        
-        
+       
         self.Text1 = Text(root)
         self.Text1.place(relx=0.03, rely=0.65, relheight=0.29, relwidth=0.93)
         self.Text1.configure(background="white")
@@ -971,14 +870,7 @@ class HOTEL_MANGMENT_checkin:
         self.Frame2.configure(highlightbackground="#ffffff")
         self.Frame2.configure(highlightcolor="black")
         self.Frame2.configure(width=995)
-
-        
-      
-        
-
-        
-
-        
+   
         empty=[]
         groupOne = StringVar()
         self.Entry0 = Combobox(self.Frame2,values=partGroup)
@@ -1008,13 +900,9 @@ class HOTEL_MANGMENT_checkin:
         self.Entry1 = Combobox(self.Frame2,values=empty)
         self.mobile=StringVar()
         self.Entry1.place(relx=0.47, rely=0.19,height=34, relwidth=0.43)
-        self.Entry1.configure(background="white")
-                
+        self.Entry1.configure(background="white")                
         self.Entry1.configure(textvariable=groupFour)
 
-
-
-        
 
         self.Button2 = Button(self.Frame2)
         self.Button2.place(relx=0.91, rely=0.05, height=33, width=43)
@@ -1029,108 +917,26 @@ class HOTEL_MANGMENT_checkin:
         self.Button2.configure(text='''OK''')
         self.Button2.configure(command=dynamic_change)
 
-        '''self.Button2 = Button(self.Frame2)
-        self.Button2.place(relx=0.91, rely=0.19, height=33, width=43)
-        self.Button2.configure(activebackground="#ffffff")
-        self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="white smoke")
-        self.Button2.configure(disabledforeground="#bfbfbf")
-        self.Button2.configure(foreground="#000000")
-        self.Button2.configure(highlightbackground="#ffffff")
-        self.Button2.configure(highlightcolor="black")
-        self.Button2.configure(pady="0")
-        self.Button2.configure(text=OK)
-        self.Button2.configure(command=dynamic_change)
-
-        self.Button2 = Button(self.Frame2)
-        self.Button2.place(relx=0.91, rely=0.31, height=33, width=43)
-        self.Button2.configure(activebackground="#ffffff")
-        self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="white smoke")
-        self.Button2.configure(disabledforeground="#bfbfbf")
-        self.Button2.configure(foreground="#000000")
-        self.Button2.configure(highlightbackground="#ffffff")
-        self.Button2.configure(highlightcolor="black")
-        self.Button2.configure(pady="0")
-        self.Button2.configure(text=OK)
-        self.Button2.configure(command=dynamic_change)
-        
-        self.Button2 = Button(self.Frame2)
-        self.Button2.place(relx=0.91, rely=0.44, height=33, width=43)
-        self.Button2.configure(activebackground="#ffffff")
-        self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="white smoke")
-        self.Button2.configure(disabledforeground="#bfbfbf")
-        self.Button2.configure(foreground="#000000")
-        self.Button2.configure(highlightbackground="#ffffff")
-        self.Button2.configure(highlightcolor="black")
-        self.Button2.configure(pady="0")
-        self.Button2.configure(text=OK)
-        self.Button2.configure(command=dynamic_change)
-
-        self.Button2 = Button(self.Frame2)
-        self.Button2.place(relx=0.91, rely=0.59, height=33, width=43)
-        self.Button2.configure(activebackground="#ffffff")
-        self.Button2.configure(activeforeground="#000000")
-        self.Button2.configure(background="white smoke")
-        self.Button2.configure(disabledforeground="#bfbfbf")
-        self.Button2.configure(foreground="#000000")
-        self.Button2.configure(highlightbackground="#ffffff")
-        self.Button2.configure(highlightcolor="black")
-        self.Button2.configure(pady="0")
-        self.Button2.configure(text=OK)
-        self.Button2.configure(command=dynamic_change)'''
-        
-
-
-        
-
-        
         groupTwo = StringVar()
         self.Entry5 = Entry(self.Frame2)
         self.mobile=StringVar()
         self.Entry5.place(relx=0.47, rely=0.60,height=34, relwidth=0.10)
         self.Entry5.configure(background="white smoke")
-               
-        
         self.Entry5.configure(textvariable=groupTwo)
  
-
-        
-
         groupTwo = StringVar()
         self.Entry6 = Entry(self.Frame2)
         self.mobile=StringVar()
         self.Entry6.place(relx=0.57, rely=0.60,height=34, relwidth=0.10)
-        self.Entry6.configure(background="white smoke")
-        
-        self.Entry6.configure(textvariable=groupTwo)
-
-
-        
+        self.Entry6.configure(background="white smoke") 
+        self.Entry6.configure(textvariable=groupTwo)    
 
         groupTwo = StringVar()
         self.Entry7 = Entry(self.Frame2)
         self.mobile=StringVar()
         self.Entry7.place(relx=0.67, rely=0.60,height=34, relwidth=0.10)
         self.Entry7.configure(background="white smoke")
-        
         self.Entry7.configure(textvariable=groupTwo)
-
-        
-        
-
-
-        
-        
-
-       
-        
-
-        
-
-        
-        
 
         self.Label3 = Label(self.Frame2)
         self.Label3.place(relx=0.05, rely=0.03, height=47, width=289)
@@ -1198,11 +1004,6 @@ class HOTEL_MANGMENT_checkin:
         self.Message5.configure(text=''':''')
         self.Message5.configure(width=26)
 
-        
-
-        
-        
-
         self.Message4 = Message(self.Frame2)
         self.Message4.place(relx=0.41, rely=0.04, relheight=0.1, relwidth=0.05)
         self.Message4.configure(background="dark slate gray")
@@ -1232,13 +1033,6 @@ class HOTEL_MANGMENT_checkin:
         self.Message6.configure(highlightcolor="black")
         self.Message6.configure(text=''':''')
         self.Message6.configure(width=36)
-
-      
-
-        
-
-       
-        
 
         self.Button4 = Button(self.Frame2)
         self.Button4.place(relx=0.76, rely=0.72, height=83, width=156)
@@ -1271,11 +1065,6 @@ class HOTEL_MANGMENT_checkin:
         self.Button4.bind("<Leave>", leave)
         self.Button4.configure(text='''GET INFO''')
         self.Button4.configure(command=image_show)
-
-        
-
-
-        
 
         self.Message8 = Message(self.Frame2)
         self.Message8.place(relx=0.42, rely=0.41, relheight=0.11, relwidth=0.03)
