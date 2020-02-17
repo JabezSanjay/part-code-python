@@ -819,10 +819,12 @@ class HOTEL_MANGMENT_checkin:
 
         def enter(event):
             self.Button4.configure(foreground="red")
+            self.Button5.configure(foreground="red")
+
 
         def leave(event):
             self.Button4.configure(foreground="#000000")    
-       
+            self.Button5.configure(foreground="#000000")  
         self.Frame3 = Frame(root)
         self.Frame3.place(relx=0.03, rely=0.40, relheight=0.46, relwidth=0.93)
         self.Frame3.configure(relief=GROOVE)
@@ -937,7 +939,7 @@ class HOTEL_MANGMENT_checkin:
         self.Entry7.configure(textvariable=groupTwo)
 
         self.Label3 = Label(self.Frame2)
-        self.Label3.place(relx=0.071, rely=0.03, height=47, width=289)
+        self.Label3.place(relx=0.06, rely=0.03, height=47, width=289)
         self.Label3.configure(activebackground="#ffffff")
         self.Label3.configure(activeforeground="black")
         self.Label3.configure(background="#2D65A2")
@@ -981,7 +983,7 @@ class HOTEL_MANGMENT_checkin:
         self.Label1.configure(text='''SUB GROUP 3''')
 
         self.Label5 = Label(self.Frame2)
-        self.Label5.place(relx=0.10, rely=0.58, height=47, width=334)
+        self.Label5.place(relx=0.075, rely=0.58, height=47, width=334)
         self.Label5.configure(activebackground="#ffffff")
         self.Label5.configure(activeforeground="black")
         self.Label5.configure(background="#2D65A2")
@@ -1048,21 +1050,21 @@ class HOTEL_MANGMENT_checkin:
         self.Button4.configure(text='''SUBMIT''')
         self.Button4.configure(command=submit_clicked)
 
-        self.Button4 = Button(self.Frame2)
-        self.Button4.place(relx=0.60, rely=0.72, height=83, width=156)
-        self.Button4.configure(activebackground="#ffffff")
-        self.Button4.configure(activeforeground="#000000")
-        self.Button4.configure(background="white smoke")
-        self.Button4.configure(disabledforeground="#bfbfbf")
-        self.Button4.configure(font=font16)
-        self.Button4.configure(foreground="#000000")
-        self.Button4.configure(highlightbackground="#ffffff")
-        self.Button4.configure(highlightcolor="black")
-        self.Button4.configure(pady="0")
-        self.Button4.bind("<Enter>", enter)
-        self.Button4.bind("<Leave>", leave)
-        self.Button4.configure(text='''GET INFO''')
-        self.Button4.configure(command=image_show)
+        self.Button5 = Button(self.Frame2)
+        self.Button5.place(relx=0.60, rely=0.72, height=83, width=156)
+        self.Button5.configure(activebackground="#ffffff")
+        self.Button5.configure(activeforeground="#000000")
+        self.Button5.configure(background="white smoke")
+        self.Button5.configure(disabledforeground="#bfbfbf")
+        self.Button5.configure(font=font16)
+        self.Button5.configure(foreground="#000000")
+        self.Button5.configure(highlightbackground="#ffffff")
+        self.Button5.configure(highlightcolor="black")
+        self.Button5.configure(pady="0")
+        self.Button5.bind("<Enter>", enter)
+        self.Button5.bind("<Leave>", leave)
+        self.Button5.configure(text='''GET INFO''')
+        self.Button5.configure(command=image_show)
 
         self.Message8 = Message(self.Frame2)
         self.Message8.place(relx=0.42, rely=0.41, relheight=0.11, relwidth=0.03)
